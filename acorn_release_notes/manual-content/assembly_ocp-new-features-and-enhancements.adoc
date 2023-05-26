@@ -1,0 +1,69 @@
+:_content-type: ASSEMBLY
+[id="ocp-new-features-and-enhancements"]
+== New features and enhancements
+
+The {product-title} {product-version} release adds improvements to certain {product-title} components and concepts.
+
+[id="ocp-4-14-rhcos"]
+=== {op-system-first}
+
+[id="ocp-4-14-installation-and-update"]
+=== Installation and update
+
+[id="ocp-4-14-post-installation"]
+=== Post-installation configuration
+
+
+[id="ocp-4-14-web-console"]
+=== Web console
+
+[id="ocp-4-14-developer-perspective"]
+==== Developer Perspective
+
+[id="ocp-4-14-ibm-z"]
+=== {ibmzProductName} and {linuxoneProductName}
+
+[id="ocp-4-14-ibm-power"]
+=== {ibmpowerProductName}
+
+[id="ocp-4-14-auth"]
+=== Authentication and authorization
+
+[id="ocp-4-14-networking"]
+=== Networking
+
+[id="ocp-4-14-storage"]
+=== Storage
+
+[id="ocp-4-14-olm"]
+=== Operator lifecycle
+
+[id="ocp-4-14-osdk"]
+=== Operator development
+
+[id="ocp-4-14-machine-config-operator"]
+=== Machine Config Operator
+
+[id="ocp-4-14-nodes"]
+=== Nodes
+
+[id="ocp-4-14-monitoring"]
+=== Monitoring
+
+[id="ocp-4-14-scalability-and-performance"]
+=== Scalability and performance
+
+[id="ocp-4-14-hcp"]
+=== Hosted control planes (Technology Preview)
+
+[id="install-sno-requirements-for-installing-on-a-single-node"]
+=== Requirements for installing {product-title} on a single node
+
+{product-version} now supports `x86_64` and `arm64` CPU architectures.
+
+[id="ocp-4-14-notable-technical-changes"]
+== Notable technical changes
+
+{product-title} {product-version} introduces the following notable technical changes.
+
+// Note: use [discrete] for these sub-headings.

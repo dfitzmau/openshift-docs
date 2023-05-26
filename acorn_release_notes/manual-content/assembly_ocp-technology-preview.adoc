@@ -1,0 +1,522 @@
+:_content-type: ASSEMBLY
+[id="ocp-4-14-technology-preview"]
+== Technology Preview features
+
+Some features in this release are currently in Technology Preview. These experimental features are not intended for production use. Note the following scope of support on the Red Hat Customer Portal for these features:
+
+link:https://access.redhat.com/support/offerings/techpreview[Technology Preview Features Support Scope]
+
+In the following tables, features are marked with the following statuses:
+
+* _Technology Preview_
+* _General Availability_
+* _Not Available_
+* _Deprecated_
+
+[discrete]
+=== Networking Technology Preview features
+
+.Networking Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|PTP dual NIC hardware configured as boundary clock
+|Technology Preview
+|General Availability
+|General Availability
+
+|Ingress Node Firewall Operator
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Advertise using L2 mode the MetalLB service from a subset of nodes, using a specific pool of IP addresses
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Multi-network policies for SR-IOV networks
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|OVN-Kubernetes network plugin as secondary network
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|Updating the interface-specific safe sysctls list
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|MT2892 Family [ConnectX-6 Dx] SR-IOV support
+|Technology Preview
+|General Availability
+|General Availability
+
+|MT2894 Family [ConnectX-6 Lx] SR-IOV support
+|Technology Preview
+|General Availability
+|General Availability
+
+|MT42822 BlueField-2 in ConnectX-6 NIC mode SR-IOV support
+|Technology Preview
+|General Availability
+|General Availability
+
+|Silicom STS Family SR-IOV support
+|Technology Preview
+|General Availability
+|General Availability
+
+|MT2892 Family [ConnectX-6 Dx] OvS Hardware Offload support
+|Technology Preview
+|General Availability
+|General Availability
+
+|MT2894 Family [ConnectX-6 Lx] OvS Hardware Offload support
+|Technology Preview
+|General Availability
+|General Availability
+
+|MT42822 BlueField-2 in ConnectX-6 NIC mode OvS Hardware Offload support
+|Technology Preview
+|General Availability
+|General Availability
+
+|Switching Bluefield-2 from DPU to NIC
+|Technology Preview
+|General Availability
+|General Availability
+
+|Intel E810-XXVDA4T
+|Not Available
+|General Availability
+|General Availability
+
+|====
+
+[discrete]
+=== Storage Technology Preview features
+
+.Storage Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|Shared Resources CSI Driver and Build CSI Volumes in OpenShift Builds
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|CSI Google Filestore Driver Operator
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|CSI automatic migration
+(Azure file, VMware vSphere)
+|Technology Preview
+|General Availability
+|General Availability
+
+|CSI inline ephemeral volumes
+|Technology Preview
+|General Availability
+|General Availability
+
+|Automatic device discovery and provisioning with Local Storage Operator
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|====
+
+[discrete]
+=== Installation Technology Preview features
+
+.Installation Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|Adding kernel modules to nodes with kvc
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|IBM Cloud VPC clusters
+|Technology Preview
+|General Availability
+|General Availability
+
+|Selectable Cluster Inventory
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Multi-architecture compute machines
+|Technology Preview
+|General Availability
+|General Availability
+
+|Mount shared entitlements in BuildConfigs in RHEL
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Enabling NIC partitioning for SR-IOV devices
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|Azure Tagging
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|GCP Confidential VMs
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|====
+
+[discrete]
+=== Node Technology Preview features
+
+.Nodes Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|Linux Control Group version 2 (cgroup v2)
+|Technology Preview
+|General Availability
+|General Availability
+
+|crun container runtime
+|Technology Preview
+|General Availability
+|General Availability
+
+|Cron job time zones
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|====
+
+[discrete]
+=== Multi-Architecture Technology Preview features
+
+.Multi-Architecture Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|`kdump` on `arm64` architecture
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|`kdump` on `s390x` architecture
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|`kdump` on `ppc64le` architecture
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|IBM Secure Execution on {ibmzProductName} and {linuxoneProductName}
+|Technology Preview
+|General Availability
+|General Availability
+
+|{ibmpowerProductName} Virtual Server using installer-provisioned infrastructure
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|{ibmpowerProductName} Virtual Server Block CSI Driver Operator
+|Not Available
+|Technology Preview
+|Technology Preview
+|====
+
+[discrete]
+=== Specialized hardware and driver enablement Technology Preview features
+
+.Specialized hardware and driver enablement Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|Driver Toolkit
+|Technology Preview
+|General Availability
+|General Availability
+
+|Special Resource Operator (SRO)
+|Technology Preview
+|Not Available
+|Not Available
+
+|Hub and spoke cluster support
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|====
+
+[discrete]
+=== Web console Technology Preview features
+
+.Web console Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+//|Multicluster console
+//|Technology Preview
+//|Technology Preview
+//|Technology Preview
+
+|====
+
+[discrete]
+[id="ocp-413-scalability-tech-preview"]
+=== Scalability and performance Technology Preview features
+
+.Scalability and performance Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|Hyperthreading-aware CPU manager policy
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Node Observability Operator
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|{factory-prestaging-tool}
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|{sno-caps} cluster expansion with worker nodes
+|Technology Preview
+|General Availability
+|General Availability
+
+|{cgu-operator-first}
+|Technology Preview
+|General Availability
+|General Availability
+
+|Mount namespace encapsulation
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|NUMA-aware scheduling with NUMA Resources Operator
+|Technology Preview
+|General Availability
+|General Availability
+
+|HTTP transport replaces AMQP for PTP and bare-metal events
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|Intel E810 Westport Channel NIC as PTP grandmaster clock
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|Workload partitioning for three-node clusters and standard clusters
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|====
+
+[discrete]
+=== Operator Technology Preview features
+
+.Operator Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|Hybrid Helm Operator
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Java-based Operator
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Multi-cluster Engine Operator
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Node Observability Operator
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|Platform Operators
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|RukPak
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|====
+
+[discrete]
+=== Monitoring Technology Preview features
+
+.Monitoring Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+
+|Alerting rules based on platform monitoring metrics
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Metrics Collection Profiles
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|====
+
+[discrete]
+=== {rh-openstack-first} Technology Preview features
+
+.{rh-openstack} Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+
+|====
+
+[discrete]
+=== Architecture Technology Preview features
+
+.Architecture Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|Hosted control planes for {product-title} on bare metal
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Hosted control planes for {product-title} on Amazon Web Services (AWS)
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Hosted control planes for {product-title} on {VirtProductName}
+|Not Available
+|Technology Preview
+|Technology Preview
+
+|====
+
+[discrete]
+=== Machine management Technology Preview features
+
+.Machine management Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|Managing machines with the Cluster API
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Cloud controller manager for Alibaba Cloud
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Cloud controller manager for Amazon Web Services
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Cloud controller manager for Google Cloud Platform
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Cloud controller manager for Microsoft Azure
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|Cloud controller manager for Nutanix
+|Technology Preview
+|General Availability
+|General Availability
+
+|Cloud controller manager for VMware vSphere
+|Technology Preview
+|General Availability
+|General Availability
+
+|====
+
+[discrete]
+=== Authentication and authorization Technology Preview features
+
+.Authentication and authorization Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|Pod security admission restricted enforcement
+|Technology Preview
+|Technology Preview
+|Technology Preview
+
+|====
+
+[discrete]
+=== Machine Config Operator Technology Preview features
+
+.Machine Config Operator Technology Preview tracker
+[cols="4,1,1,1",options="header"]
+|====
+|Feature |4.12 |4.13 |4.14
+
+|{op-system-first} image layering
+|Technology Preview
+|General Availability
+|General Availability
+
+|====

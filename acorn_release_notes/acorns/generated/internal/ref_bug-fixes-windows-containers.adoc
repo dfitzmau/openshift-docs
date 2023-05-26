@@ -1,0 +1,23 @@
+[id="bug-fixes-windows-containers"]
+= Windows containers
+
+
+
+// A note that explains why some links aren't clickable. You can override the attribute in your manual doc files.
+ifndef::fn-private[]
+:fn-private: pass:c,q[footnote:private[This ticket is not publicly accessible. Therefore, the release note does not include a link to the ticket.]]
+endif::[]
+
+
+[id="Jira-OCPBUGS-13244"]
+Cause: WMCO fails to configure Windows Server 2019 instances on Azure that do not have the Containers feature pre-installed with "Install-WindowsFeature : Win32 internal error "Access is denied" 0x5
+occurred while reading the console output buffer". This happens because the command results in a progress bar being displayed and that cannot
+be displayed over ssh and results in the error. 
+
+Consequence: VM never get configured into a node
+
+Fix: Fix this by silencing progress bar.
+
+Result: VM gets configured into a node
+
+Jira:OCPBUGS-13244 | Missing docs contact | Done | link:https://issues.redhat.com/browse/OCPBUGS-13244[]

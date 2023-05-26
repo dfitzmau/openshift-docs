@@ -1,0 +1,9 @@
+[id="bug-fixes"]
+= Bug fixes
+
+This part describes bugs fixed in {ProductName}{nbsp}{ProductNumber} that have a significant impact on users.
+
+
+include::ref_bug-fixes-hosted-control-plane.adoc[leveloffset=+1]
+
+include::ref_bug-fixes-windows-containers.adoc[leveloffset=+1]

@@ -1,0 +1,60 @@
+bugzilla:
+  host: ""
+  fields:
+    doc_type:
+      - ""
+    doc_text:
+      - ""
+    doc_text_status:
+      - ""
+    target_release:
+      - ""
+    subsystems:
+      - ""
+
+jira:
+  host: "https://issues.redhat.com"
+  fields:
+    doc_type: # Release Note Type field in OCP
+      # - "customfield_12317310" # Release Note Type field
+      # RHELPLAN
+      # - "customfield_12317310"
+      # RHEL
+      - "customfield_12320850"
+            
+      # - "customfield_12317360"
+      # - "customfield_12310211"
+      
+    doc_text: # Release Note Text field in OCP
+      # - "customfield_12320850" # Release Note field
+      # RHELPLAN
+      # - "customfield_12317322"
+      # RHEL
+      - "customfield_12310211"
+      - "customfield_12317313"
+
+    doc_text_status: # Release Note Status field in OCP
+      # - "customfield_12310213" # Release Note Status field
+      # RHELPLAN
+      # - "customfield_12317337"
+      # RHEL
+      - "customfield_12310213"
+
+    docs_contact: # Field does not exist in OCP
+      # - "customfield_12317336"
+      # RHELPLAN
+      # - "customfield_12317336"
+      # RHEL
+      - "customfield_12317360"
+
+    # Not used in OpenShift docs
+    subsystems:
+      # RHELPLAN
+      - ""
+      # RHEL
+      - ""
+
+    target_release: # Fix Target Version in OCP
+      - ""
+      # - "customfield_12319940" # Fix Target Version
+

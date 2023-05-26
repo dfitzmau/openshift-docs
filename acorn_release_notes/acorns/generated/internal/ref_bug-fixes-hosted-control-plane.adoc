@@ -1,0 +1,15 @@
+[id="bug-fixes-hosted-control-plane"]
+= Hosted Control Plane
+
+
+
+// A note that explains why some links aren't clickable. You can override the attribute in your manual doc files.
+ifndef::fn-private[]
+:fn-private: pass:c,q[footnote:private[This ticket is not publicly accessible. Therefore, the release note does not include a link to the ticket.]]
+endif::[]
+
+
+[id="Jira-OCPBUGS-10227"]
+Previously, a hosted cluster did not account for OpenID Connect (OIDC) providers, `oidc`, unavailability that caused the deletion of `machine` and `machineset` objects to stale. With this update, a hosted cluster can detect the status of an unavilable `odic` provider, so that the deletion of `machine` and `machineset` objects to not stale because of an unvailable `oidc` provider.  (link:https://issues.redhat.com/browse/OCPBUGS-10227[*OCPBUGS-10227*])
+
+Jira:OCPBUGS-10227 | Missing docs contact | Done | link:https://issues.redhat.com/browse/OCPBUGS-10227[]
