@@ -1,0 +1,17 @@
+:_content-type: PROCEDURE
+[id="extend_existing_to_local_zones_day2_{context}"]
+= Extend existing clusters to use AWS Local Zones
+
+As a post-installation task, you can extend an existing {product-title} cluster on Amazon Web Services (AWS) to use AWS Local Zones.
+
+Extending nodes to Local Zone locations comprises the following actions:
+
+- Adjust the cluster-network Maximum Transmission Unit (MTU).
+- Opt-in the Local Zone group.
+- Create a subnet in the existing VPC for a Local Zone location.
+- Create the machine set manifest and then create a node in the Local Zone location.
+
+[IMPORTANT]
+====
+Before you extend an existing {product-title} cluster on AWS to use Local Zones, check that the existing VPC contains empty and available Classless Inter-Domain Routing (CIDR) blocks.
+====
