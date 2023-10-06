@@ -2,9 +2,16 @@
 //
 // * machine_management/creating-infrastructure-machinesets.adoc
 // * machine_management/creating_machinesets/creating-machineset-aws.adoc
+// * post_installation_configuration/aws-compute-edge-tasks.adoc
 
 ifeval::["{context}" == "creating-infrastructure-machinesets"]
 :infra:
+endif::[]
+ifeval::["{context}" == "cluster-tasks"]
+:infra:
+endif::[]
+ifeval::["{context}" == "aws-compute-edge-tasks"]
+:postinstall-aws-lz:
 endif::[]
 
 :_content-type: REFERENCE
@@ -98,10 +105,16 @@ endif::infra[]
                   values:
                     - <infrastructure_id>-worker-sg <1>
           subnet:
+ifndef::postinstall-aws-lz[]
             filters:
               - name: tag:Name
                 values:
                   - <infrastructure_id>-private-<zone> <8>
+endif:postinstall-aws-lz[]
+ifdef::postinstall-aws-lz[]
+            id: ${localzone_subnet_id}
+          publicIp: true
+endif:postinstall-aws-lz[]
           tags:
             - name: kubernetes.io/cluster/<infrastructure_id> <1>
               value: owned
@@ -164,4 +177,7 @@ ifeval::["{context}" == "creating-infrastructure-machinesets"]
 endif::[]
 ifeval::["{context}" == "cluster-tasks"]
 :!infra:
+endif::[]
+ifeval::["{context}" == "aws-compute-edge-tasks"]
+:!postinstall-aws-lz:
 endif::[]
