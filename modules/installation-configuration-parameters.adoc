@@ -2668,13 +2668,9 @@ ifdef::vsphere[]
 |Optional. The disk provisioning method. This value defaults to the vSphere default storage policy if not set.
 |Valid values are `thin`, `thick`, or `eagerZeroedThick`.
 
-|platform:
-  vsphere:
-    failureDomains:
-|Establishes the relationships between a region and zone. You define a failure domain by using vCenter objects, such as a `datastore` object. A failure domain defines the vCenter location for {product-title} cluster nodes.
 |String
 endif::vsphere[]
-ifdef::agent[]
+ifdef::agent,vsphere[]
 
 |platform:
   vsphere:
@@ -2695,7 +2691,7 @@ ifdef::agent[]
       server:
 |The fully qualified domain name (FQDN) of the vCenter server.
 |An FQDN such as example.com
-endif::agent[]
+endif::agent,vsphere[]
 
 |platform:
   vsphere:
@@ -2712,7 +2708,7 @@ endif::agent[]
         networks:
 |Lists any network in the vCenter instance that contains the virtual IP addresses and DNS records that you configured.
 |String
-ifdef::agent[]
+ifdef::agent,vsphere[]
 
 |platform:
   vsphere:
@@ -2770,7 +2766,7 @@ For more information, see "VMware vSphere region and zone enablement".
 // If you do not provide this value, the installation program creates a top-level folder in the datacenter virtual machine folder that is named with the infrastructure ID.
 // If you are providing the infrastructure for the cluster and you do not want to use the default `StorageClass` object, named `thin`, you can omit the `folder` parameter from the `install-config.yaml` file.
 |String
-endif::agent[]
+endif::agent, vsphere[]
 
 |platform:
   vsphere:
@@ -2836,7 +2832,7 @@ endif::agent[]
       datacenters:
 |Lists and defines the datacenters where {product-title} virtual machines (VMs) operate. The list of datacenters must match the list of datacenters specified in the `failureDomains` field.
 |String
-ifdef::agent[]
+ifdef::agent,vsphere[]
 
 |platform:
   vsphere:
@@ -2865,7 +2861,7 @@ ifdef::agent[]
       user:
 |The username associated with the vSphere user.
 |String
-endif::agent[]
+endif::agent,vsphere[]
 |====
 
 [id="deprecated-parameters-vsphere_{context}"]
