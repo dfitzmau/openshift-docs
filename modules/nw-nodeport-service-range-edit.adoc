@@ -22,7 +22,7 @@ You can expand the node port range for the cluster.
 $ oc patch network.config.openshift.io cluster --type=merge -p \
   '{
     "spec":
-      { "serviceNodePortRange": "30000-<port>" }
+      { "serviceNodePortRange": "29000-32768"}
   }'
 ----
 +
@@ -37,7 +37,7 @@ kind: Network
 metadata:
   name: cluster
 spec:
-  serviceNodePortRange: "30000-<port>"
+  serviceNodePortRange: "29000-32768"
 ----
 ====
 +
@@ -59,5 +59,5 @@ $ oc get configmaps -n openshift-kube-apiserver config \
 .Example output
 [source,terminal]
 ----
-"service-node-port-range":["30000-33000"]
+"service-node-port-range":["29000-32768"]
 ----

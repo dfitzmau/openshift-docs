@@ -15,6 +15,7 @@ The default port range is `30000-32767`. You can never reduce the port range, ev
 
 - Your cluster infrastructure must allow access to the ports that you specify within the expanded range. For example, if you expand the node port range to `30000-32900`, the inclusive port range of `32768-32900` must be allowed by your firewall or packet filtering configuration.
 
+// Expanding the node port range
 include::modules/nw-nodeport-service-range-edit.adoc[leveloffset=+1]
 
 [role="_additional-resources"]
