@@ -1079,12 +1079,18 @@ Distros: openshift-rosa
 Topics:
 - Name: About networking
   File: about-managed-networking
-- Name: Understanding the DNS Operator
-  File: dns-operator
-- Name: Understanding the Ingress Operator
-  File: ingress-operator
-- Name: AWS Load Balancer Operator
-  File: aws-load-balancer-operator
+- Name: Networking Operators
+  Dir: networking_operators
+  Distros: openshift-rosa
+  Topics:
+  - Name: Understanding the DNS Operator
+    File: dns-operator
+  - Name: Understanding the Ingress Operator
+    File: ingress-operator
+  - Name: AWS Load Balancer Operator
+    File: aws-load-balancer-operator
+  - Name: Understanding the Ingress Node Firewall Operator
+    File: ingress-node-firewall-operator
 - Name: Network verification
   File: network-verification
 - Name: Configuring a cluster-wide proxy during installation
@@ -1123,8 +1129,6 @@ Topics:
       File: default-network-policy
     - Name: Configuring multitenant isolation with network policy
       File: multitenant-network-policy
-  - Name: Understanding the Ingress Node Firewall Operator
-    File: ingress-node-firewall-operator
 - Name: OVN-Kubernetes network plugin
   Dir: ovn_kubernetes_network_provider
   Topics:

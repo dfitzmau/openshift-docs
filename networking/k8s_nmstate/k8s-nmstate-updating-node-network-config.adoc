@@ -46,7 +46,7 @@ include::modules/virt-example-vf-host-services.adoc[leveloffset=+2]
 
 [role="_additional-resources"]
 .Additional resources
-* xref:../../networking/hardware_networks/configuring-sriov-device.adoc#configuring-sriov-device[Configuring an SR-IOV network device]
+* xref:../../networking/hardware_networks/configuring-sriov-device#nw-sriov-configuring-device_configuring-sriov-device[Configuring an SR-IOV network device]
 
 * xref:../../networking/hardware_networks/configuring-hardware-offloading.adoc#configuring-hardware-offloading[Configuring hardware offloading]
 

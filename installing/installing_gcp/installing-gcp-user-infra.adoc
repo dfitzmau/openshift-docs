@@ -56,8 +56,7 @@ include::modules/installation-gcp-install-cli.adoc[leveloffset=+2]
 [id="installation-requirements-user-infra_{context}"]
 == Requirements for a cluster with user-provisioned infrastructure
 
-For a cluster that contains user-provisioned infrastructure, you must deploy all
-of the required machines.
+For a cluster that contains user-provisioned infrastructure, you must deploy all of the required machines.
 
 This section describes the requirements for deploying {product-title} on user-provisioned infrastructure.
 
@@ -150,4 +149,4 @@ include::modules/cluster-telemetry.adoc[leveloffset=+1]
 
 * xref:../../post_installation_configuration/cluster-tasks.adoc#available_cluster_customizations[Customize your cluster].
 * If necessary, you can xref:../../support/remote_health_monitoring/opting-out-of-remote-health-reporting.adoc#opting-out-remote-health-reporting_opting-out-remote-health-reporting[opt out of remote health reporting].
-* xref:../../networking/ingress-operator.adoc#nw-ingress-controller-configuration-gcp-global-access_configuring-ingress[Configure Global Access for an Ingress Controller on GCP].
+* xref:../../networking/networking_operators/ingress-operator.adoc#nw-ingress-controller-configuration-gcp-global-access_configuring-ingress[Configure global access for an Ingress Controller on {gcp-short}].

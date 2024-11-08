@@ -42,7 +42,7 @@ include::modules/olm-node-selector.adoc[leveloffset=+1]
 [role="_additional-resources"]
 .Additional resources
 
-* xref:../../nodes/scheduling/nodes-scheduler-node-selectors.adoc#nodes-scheduler-node-selectors[Placing pods on specific nodes using node selectors]
+* ../../nodes/scheduling/nodes-scheduler-node-selectors.adoc#nodes-scheduler-node-selectors[Placing pods on specific nodes using node selectors]
 
 include::modules/olm-priority-class-name.adoc[leveloffset=+1]
 
