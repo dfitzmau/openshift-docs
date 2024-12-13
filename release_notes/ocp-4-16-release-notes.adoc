@@ -3338,6 +3338,26 @@ This section will continue to be updated over time to provide notes on enhanceme
 For any {product-title} release, always review the instructions on xref:../updating/updating_a_cluster/updating-cluster-web-console.adoc#updating-cluster-web-console[updating your cluster] properly.
 ====
 
+//4.16.27
+[id="ocp-4-16-27_{context}"]
+=== RHBA-2024:10973 - {product-title} {product-version}.26 bug fix and security update
+
+Issued: 18 December 2024
+
+{product-title} release {product-version}.27 is now available. The list of bug fixes that are included in the update is documented in the link:https://access.redhat.com/errata/RHBA-2024:10973[RHBA-2024:10973] advisory. The RPM packages that are included in the update are provided by the link:https://access.redhat.com/errata/RHBA-2024:10976[RHBA-2024:10976] advisory.
+
+Space precluded documenting all of the container images for this release in the advisory.
+
+You can view the container images in this release by running the following command:
+
+[source,terminal]
+----
+$ oc adm release info 4.16.27 --pullspecs
+----
+
+
+
+
 //4.16.26
 [id="ocp-4-16-26_{context}"]
 === RHSA-2024:10823 - {product-title} {product-version}.26 bug fix and security update
@@ -3354,6 +3374,22 @@ You can view the container images in this release by running the following comma
 ----
 $ oc adm release info 4.16.26 --pullspecs
 ----
+
+[id="ocp-4-16-27-known-issues_{context}"]
+==== Known issues
+
+* If you plan on using the NUMA Resources Operator in your {product-title} cluster, https://issues.redhat.com/browse/OCPBUGS-45983 asking SME.
+
+[id="ocp-4-16-27-bug-fixes_{context}"]
+==== Bug fixes
+
+// SME review needed
+* Previously, when `openshift-sdn` pods  were deployed during the {product-title} {product-version} upgrading process, the Open vSwitch (OVS) storage table was cleared. Ports for existing pods had to be re-created and this caused disruption to numerous services. With this release, a fix ensures if a pod becomes disconnected from the network during the cluster upgrade operation, services continue to run as expected without any disruptions. (link:https://issues.redhat.com/browse/OCPBUGS-45806[*OCPBUGS-45806*])
+
+* Previously, you could not remove a finally pipeline task from the *edit Pipeline* form if you created a pipeline with only one finally task. With this release, you can remove the finally task from the *edit Pipeline* form and the issue is resolved. (link:https://issues.redhat.com/browse/OCPBUGS-45229[*OCPBUGS-45229*])ssss
+
+
+
 
 [id="ocp-4-16-26-enhancements_{context}"]
 ==== Enhancements
