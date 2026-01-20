@@ -6,7 +6,8 @@
 [id="nw-path-based-routes_{context}"]
 = Path-based routes
 
-Path-based routes specify a path component that can be compared against a URL, which requires that the traffic for the route be HTTP based. Thus, multiple routes can be served using the same hostname, each with a different path. Routers should match routes based on the most specific path to the least.
+[role="_abstract"]
+To serve multiple applications by using a single hostname, configure path-based routes. This HTTP-based configuration directs traffic to specific services by comparing the URL path component, ensuring requests match the most specific route defined.
 
 The following table shows example routes and their accessibility:
 
@@ -22,8 +23,7 @@ The following table shows example routes and their accessibility:
 |_www.example.com_|Yes
 |===
 
-.An unsecured route with a path
-
+.Example of an unsecured route with a path
 [source,yaml]
 ----
 apiVersion: route.openshift.io/v1
@@ -37,9 +37,9 @@ spec:
     kind: Service
     name: service-name
 ----
-* Specifies the path that is the only added attribute for a path-based route.
+* `spec.path`:: Specifies the path attribute is the only added attribute for a path-based route.
 
 [NOTE]
 ====
-Path-based routing is not available when using passthrough TLS, as the router does not terminate TLS in that case and cannot read the contents of the request.
+Path-based routing is not available when using passthrough TLS. This occurs because the router does not terminate TLS and cannot read the contents of the request.
 ====
