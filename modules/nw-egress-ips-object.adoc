@@ -7,7 +7,7 @@
 = EgressIP object
 
 [role="_abstract"]
-View the following YAML files to better understand how you can effectively configure an `EgressIP` object to better meet your needs.
+View the example YAML files to better understand how you can effectively configure an `EgressIP` object to better meet your needs.
 
 When the `EgressIP` namespace selector matches the label on multiple namespaces, consider the following behaviors:
 
@@ -41,7 +41,7 @@ spec:
 --
 where:
 
-`<name>`:: The name for the `EgressIPs` object.
+`<name>`:: The name for the `EgressIP` object.
 
 `<egressIPs>`:: An array of one or more IP addresses.
 

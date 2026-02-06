@@ -2,10 +2,12 @@
 [id="microshift-uninstall-rpm"]
 include::_attributes/attributes-microshift.adoc[]
 = Uninstalling {microshift-short}
+
 :context: microshift-uninstall-rpm
 
 toc::[]
 
-Before you uninstall {microshift-short}, clean up all the {microshift-short} data and configuration by running the `microshift-cleanup-data` script.
+[role="_abstract"]
+Remove {microshift-short} from your system completely, including all data and configuration files.
 
 include::modules/microshift-uninstall-microshift-rpms.adoc[leveloffset=+1]
