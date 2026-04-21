@@ -128,12 +128,21 @@ Detailed information.
 [id="ocp-release-notes-monitoring_{context}"]
 == Monitoring
 
-// This should be left for a little while to get users used to the fact that they will find release notes at a new place.
+// This should be left for a little while to get users used to the fact that they will find release notes aViewing metrics collected by the Kubernetes NMState Operatort a new place.
 
 
 [id="ocp-release-notes-networking_{context}"]
 == Networking
 
+Kubernetes NMState Operator extends metrics support:
++
+The Kubernetes NMState Operator can now collect metrics from the following Kubernetes components:
++
+* `kubernetes_nmstate_policies_status`, which tracks the active status of `NodeNetworkConfigurationPolicy` (NNCP) resources across the cluster.
++
+* `kubernetes_nmstate_enactments_status`, which tracks the active status of `NodeNetworkConfigurationEnactment` (NNCE) resources on a per-node basis.
++
+For more information, see xref:../networking/k8s_nmstate/k8s-nmstate-about-the-k8s-nmstate-operator.adoc#viewing-stats-collected-kubernetes-nmtate-op_k8s-nmstate-about-the-k8s-nmstate-operator[Viewing metrics collected by the Kubernetes NMState Operator].
 
 [id="ocp-release-notes-nodes_{context}"]
 == Nodes
