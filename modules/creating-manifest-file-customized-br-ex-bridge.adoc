@@ -8,13 +8,6 @@
 // * installing/installing_bare_metal/installing-restricted-networks-bare-metal.adoc
 // * installing/installing_bare_metal/installing-bare-metal.adoc
 
-ifeval::["{context}" == "ipi-install-post-installation-configuration"]
-:postinstall-bare-metal-ipi:
-endif::[]
-ifeval::["{context}" == "post-install-bare-metal-configuration"]
-:postinstall-bare-metal-upi:
-endif::[]
-
 :_mod-docs-content-type: PROCEDURE
 [id="creating-manifest-file-customized-br-ex-bridge_{context}"]
 = Creating a manifest object that includes a customized br-ex bridge
@@ -290,9 +283,3 @@ endif::postinstall-bare-metal-ipi,postinstall-bare-metal-upi[]
 
 * Scaling compute nodes to apply the manifest object that includes a customized `br-ex` bridge to each compute node that exists in your cluster. For more information, see "Expanding the cluster" in the _Additional resources_ section.
 
-ifeval::["{context}" == "ipi-install-post-installation-configuration"]
-:!postinstall-bare-metal-ipi:
-endif::[]
-ifeval::["{context}" == "bare-metal-configuration"]
-:!postinstall-bare-metal-upi:
-endif::[]
