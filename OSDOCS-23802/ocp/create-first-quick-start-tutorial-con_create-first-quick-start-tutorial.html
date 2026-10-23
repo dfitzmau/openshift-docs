@@ -437,8 +437,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
+<!-- navmap-right-toc-start -->
+<style>
+  body.navmap-has-right-toc { padding-right: 18em; }
+  #navmap-right-toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 16em;
+    height: 100%;
+    overflow: auto;
+    padding: 1.25em 1em;
+    background: #f8f8f7;
+    border-left: 1px solid #e7e7e9;
+    z-index: 1000;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    font-size: .9em;
+  }
+  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
+  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
+  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
+  #navmap-right-toc li.level-3 { padding-left: 1em; }
+  #navmap-right-toc li.level-4 { padding-left: 2em; }
+  #navmap-right-toc li.level-5,
+  #navmap-right-toc li.level-6 { padding-left: 3em; }
+  #navmap-right-toc a { text-decoration: none; }
+  @media screen and (max-width: 1023px) {
+    body.navmap-has-right-toc { padding-right: 0; }
+    #navmap-right-toc {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 1em;
+      border: 1px solid #e7e7e9;
+      border-radius: 4px;
+    }
+  }
+
+
+</style>
+<!-- navmap-right-toc-end -->
 </head>
-<body id="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial" class="book toc2 toc-left">
+<body id="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1819,20 +1859,255 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#contributing-quick-starts_create-first-quick-start-tutorial">Contribute quick starts</a></li><li class="level-4"><a href="#viewing-quick-start-api-documentation_create-first-quick-start-tutorial">View the quick start API documentation</a></li><li class="level-4"><a href="#understanding-quick-start-elements_create-first-quick-start-tutorial">Map the elements in the quick start to the quick start CR</a></li><li class="level-5"><a href="#conclusion-quick-start-element_create-first-quick-start-tutorial">Conclusion element</a></li><li class="level-5"><a href="#description-quick-start-element_create-first-quick-start-tutorial">Description element</a></li><li class="level-5"><a href="#displayName-quick-start-element_create-first-quick-start-tutorial">The displayName element</a></li><li class="level-5"><a href="#duration-minutes-quick-start-element_create-first-quick-start-tutorial">The durationMinutes element</a></li><li class="level-5"><a href="#icon-quick-start-element_create-first-quick-start-tutorial">Icon element</a></li><li class="level-5"><a href="#introduction-quick-start-element_create-first-quick-start-tutorial">Introduction element</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial">Create your first quick start tutorial</h3>
 <div class="paragraph _abstract">
 <p>Create and deploy your first interactive quick-start tutorial by scaffolding the <code>ConsoleQuickStart</code> custom resource, inspecting its API specification, and mapping console UI elements directly to YAML fields.</p>
 </div>
-<div class="paragraph">
-<p>includes::modules/contributing-quick-starts.adoc[leveloffset=+1]</p>
+<div class="sect3">
+<h4 id="contributing-quick-starts_create-first-quick-start-tutorial">Contribute quick starts</h4>
+<div class="paragraph _abstract">
+<p>Red&#160;Hat OpenShift Container Platform introduces the quick start custom resource, which is defined by a <code>ConsoleQuickStart</code> object. Operators and administrators can use this resource to contribute quick starts to the cluster.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You must have cluster administrator privileges.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>To create a new quick start, run:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ oc get -o yaml consolequickstart spring-with-s2i &gt; my-quick-start.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Run:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ oc create -f my-quick-start.yaml</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Update the YAML file using the guidance outlined in this documentation.</p>
+</li>
+<li>
+<p>Save your edits.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-quick-start-api-documentation_create-first-quick-start-tutorial">View the quick start API documentation</h4>
+<div class="paragraph _abstract">
+<p>You can view the API documentation for the <code>ConsoleQuickStart</code> resource by using the <code>oc explain</code> command.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>To see the quick start API documentation, run:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc explain consolequickstarts</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>includes::modules/viewing-quick-start-api-documentation.adoc[leveloffset=+1]</p>
+<p>Run <code>oc explain -h</code> for more information about <code>oc explain</code> usage.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="understanding-quick-start-elements_create-first-quick-start-tutorial">Map the elements in the quick start to the quick start CR</h4>
+<div class="paragraph _abstract">
+<p>These mappings show where each part of the quick start custom resource (CR) is displayed in the quick start within the web console.</p>
+</div>
+<div class="sect4">
+<h5 id="conclusion-quick-start-element_create-first-quick-start-tutorial">Conclusion element</h5>
+<div class="listingblock">
+<div class="title">Viewing the conclusion element in the YAML file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">...
+summary:
+  failed: Try the steps again.
+  success: Your Spring application is running.
+title: Run the Spring application
+conclusion: &gt;-
+  Your Spring application is deployed and ready.</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>includes::modules/understanding-quick-start-elements.adoc[leveloffset=+1]</p>
+<p>The <code>conclusion</code> field defines the conclusion text.</p>
+</div>
+<div class="paragraph">
+<p>In the web console, the conclusion is displayed in the last section of the quick start.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="quick start conclusion in the web console">
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="description-quick-start-element_create-first-quick-start-tutorial">Description element</h5>
+<div class="listingblock">
+<div class="title">Viewing the description element in the YAML file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: console.openshift.io/v1
+kind: ConsoleQuickStart
+metadata:
+  name: spring-with-s2i
+spec:
+  description: 'Import a Spring Application from git, build, and deploy it onto OpenShift.'
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>description</code> field defines the description text.</p>
+</div>
+<div class="paragraph">
+<p>In the web console, the description is displayed on the introductory tile of the quick start on the <strong>Quick Starts</strong> page.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="quick start description in the web console">
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="displayName-quick-start-element_create-first-quick-start-tutorial">The <code>displayName</code> element</h5>
+<div class="listingblock">
+<div class="title">Viewing the <code>displayName</code> element in the YAML file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: console.openshift.io/v1
+kind: ConsoleQuickStart
+metadata:
+  name: spring-with-s2i
+spec:
+  description: 'Import a Spring Application from git, build, and deploy it onto OpenShift.'
+  displayName: Get started with Spring
+  durationMinutes: 10</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>displayName</code> field defines the display name text.</p>
+</div>
+<div class="paragraph">
+<p>In the web console, the display name is displayed on the introductory tile of the quick start on the <strong>Quick Starts</strong> page.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="quick start display name in the web console">
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="duration-minutes-quick-start-element_create-first-quick-start-tutorial">The <code>durationMinutes</code> element</h5>
+<div class="listingblock">
+<div class="title">Viewing the <code>durationMinutes</code> element in the YAML file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: console.openshift.io/v1
+kind: ConsoleQuickStart
+metadata:
+  name: spring-with-s2i
+spec:
+  description: 'Import a Spring Application from git, build, and deploy it onto OpenShift.'
+  displayName: Get started with Spring
+  durationMinutes: 10</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>durationMinutes</code> field defines, in minutes, how long the quick start should take to complete.</p>
+</div>
+<div class="paragraph">
+<p>In the web console, the duration minutes element is displayed on the introductory tile of the quick start on the <strong>Quick Starts</strong> page.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="quick start durationMinutes element in the web console">
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="icon-quick-start-element_create-first-quick-start-tutorial">Icon element</h5>
+<div class="listingblock">
+<div class="title">Viewing the icon element in the YAML file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">...
+spec:
+  description: 'Import a Spring Application from git, build, and deploy it onto OpenShift.'
+  displayName: Get started with Spring
+  durationMinutes: 10
+  icon: &gt;-
+    data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMTUzZDNjO30uY2xzLTJ7ZmlsbDojZDhkYTlkO30uY2xzLTN7ZmlsbDojNThjMGE4O30uY2xzLTR7ZmlsbDojZmZmO30uY2xzLTV7ZmlsbDojM2Q5MTkxO308L3N0eWxlPjwvZGVmcz48dGl0bGU+c25vd2Ryb3BfaWNvbl9yZ2JfZGVmYXVsdDwvdGl0bGU+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTAxMi42OSw1OTNjLTExLjEyLTM4LjA3LTMxLTczLTU5LjIxLTEwMy44LTkuNS0xMS4zLTIzLjIxLTI4LjI5LTM5LjA2LTQ3Ljk0QzgzMy41MywzNDEsNzQ1LjM3LDIzNC4xOCw2NzQsMTY4Ljk0Yy01LTUuMjYtMTAuMjYtMTAuMzEtMTUuNjUtMTUuMDdhMjQ2LjQ5LDI0Ni40OSwwLDAsMC0zNi41NS0yNi44LDE4Mi41LDE4Mi41LDAsMCwwLTIwLjMtMTEuNzcsMjAxLjUzLDIwMS41MywwLDAsMC00My4xOS0xNUExNTUuMjQsMTU1LjI0LDAsMCwwLDUyOCw5NS4yYy02Ljc2LS42OC0xMS43NC0uODEtMTQuMzktLjgxaDBsLTEuNjIsMC0xLjYyLDBhMTc3LjMsMTc3LjMsMCwwLDAtMzEuNzcsMy4zNSwyMDguMjMsMjA4LjIzLDAsMCwwLTU2LjEyLDE3LjU2LDE4MSwxODEsMCwwLDAtMjAuMjcsMTEuNzUsMjQ3LjQzLDI0Ny40MywwLDAsMC0zNi41NywyNi44MUMzNjAuMjUsMTU4LjYyLDM1NSwxNjMuNjgsMzUwLDE2OWMtNzEuMzUsNjUuMjUtMTU5LjUsMTcyLTI0MC4zOSwyNzIuMjhDOTMuNzMsNDYwLjg4LDgwLDQ3Ny44Nyw3MC41Miw0ODkuMTcsNDIuMzUsNTIwLDIyLjQzLDU1NC45LDExLjMxLDU5MywuNzIsNjI5LjIyLTEuNzMsNjY3LjY5LDQsNzA3LjMxLDE1LDc4Mi40OSw1NS43OCw4NTkuMTIsMTE4LjkzLDkyMy4wOWEyMiwyMiwwLDAsMCwxNS41OSw2LjUyaDEuODNsMS44Ny0uMzJjODEuMDYtMTMuOTEsMTEwLTc5LjU3LDE0My40OC0xNTUuNiwzLjkxLTguODgsNy45NS0xOC4wNSwxMi4yLTI3LjQzcTUuNDIsOC41NCwxMS4zOSwxNi4yM2MzMS44NSw0MC45MSw3NS4xMiw2NC42NywxMzIuMzIsNzIuNjNsMTguOCwyLjYyLDQuOTUtMTguMzNjMTMuMjYtNDkuMDcsMzUuMy05MC44NSw1MC42NC0xMTYuMTksMTUuMzQsMjUuMzQsMzcuMzgsNjcuMTIsNTAuNjQsMTE2LjE5bDUsMTguMzMsMTguOC0yLjYyYzU3LjItOCwxMDAuNDctMzEuNzIsMTMyLjMyLTcyLjYzcTYtNy42OCwxMS4zOS0xNi4yM2M0LjI1LDkuMzgsOC4yOSwxOC41NSwxMi4yLDI3LjQzLDMzLjQ5LDc2LDYyLjQyLDE0MS42OSwxNDMuNDgsMTU1LjZsMS44MS4zMWgxLjg5YTIyLDIyLDAsMCwwLDE1LjU5LTYuNTJjNjMuMTUtNjQsMTAzLjk1LTE0MC42LDExNC44OS0yMTUuNzhDMTAyNS43Myw2NjcuNjksMTAyMy4yOCw2MjkuMjIsMTAxMi42OSw1OTNaIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMzY0LjE1LDE4NS4yM2MxNy44OS0xNi40LDM0LjctMzAuMTUsNDkuNzctNDAuMTFhMjEyLDIxMiwwLDAsMSw2NS45My0yNS43M0ExOTgsMTk4LDAsMCwxLDUxMiwxMTYuMjdhMTk2LjExLDE5Ni4xMSwwLDAsMSwzMiwzLjFjNC41LjkxLDkuMzYsMi4wNiwxNC41MywzLjUyLDYwLjQxLDIwLjQ4LDg0LjkyLDkxLjA1LTQ3LjQ0LDI0OC4wNi0yOC43NSwzNC4xMi0xNDAuNywxOTQuODQtMTg0LjY2LDI2OC40MmE2MzAuODYsNjMwLjg2LDAsMCwwLTMzLjIyLDU4LjMyQzI3Niw2NTUuMzQsMjY1LjQsNTk4LDI2NS40LDUyMC4yOSwyNjUuNCwzNDAuNjEsMzExLjY5LDI0MC43NCwzNjQuMTUsMTg1LjIzWiIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTUyNy41NCwzODQuODNjODQuMDYtOTkuNywxMTYuMDYtMTc3LjI4LDk1LjIyLTIzMC43NCwxMS42Miw4LjY5LDI0LDE5LjIsMzcuMDYsMzEuMTMsNTIuNDgsNTUuNSw5OC43OCwxNTUuMzgsOTguNzgsMzM1LjA3LDAsNzcuNzEtMTAuNiwxMzUuMDUtMjcuNzcsMTc3LjRhNjI4LjczLDYyOC43MywwLDAsMC0zMy4yMy01OC4zMmMtMzktNjUuMjYtMTMxLjQ1LTE5OS0xNzEuOTMtMjUyLjI3QzUyNi4zMywzODYuMjksNTI3LDM4NS41Miw1MjcuNTQsMzg0LjgzWiIvPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTEzNC41OCw5MDguMDdoLS4wNmEuMzkuMzksMCwwLDEtLjI3LS4xMWMtMTE5LjUyLTEyMS4wNy0xNTUtMjg3LjQtNDcuNTQtNDA0LjU4LDM0LjYzLTQxLjE0LDEyMC0xNTEuNiwyMDIuNzUtMjQyLjE5LTMuMTMsNy02LjEyLDE0LjI1LTguOTIsMjEuNjktMjQuMzQsNjQuNDUtMzYuNjcsMTQ0LjMyLTM2LjY3LDIzNy40MSwwLDU2LjUzLDUuNTgsMTA2LDE2LjU5LDE0Ny4xNEEzMDcuNDksMzA3LjQ5LDAsMCwwLDI4MC45MSw3MjNDMjM3LDgxNi44OCwyMTYuOTMsODkzLjkzLDEzNC41OCw5MDguMDdaIi8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNNTgzLjQzLDgxMy43OUM1NjAuMTgsNzI3LjcyLDUxMiw2NjQuMTUsNTEyLDY2NC4xNXMtNDguMTcsNjMuNTctNzEuNDMsMTQ5LjY0Yy00OC40NS02Ljc0LTEwMC45MS0yNy41Mi0xMzUuNjYtOTEuMThhNjQ1LjY4LDY0NS42OCwwLDAsMSwzOS41Ny03MS41NGwuMjEtLjMyLjE5LS4zM2MzOC02My42MywxMjYuNC0xOTEuMzcsMTY3LjEyLTI0NS42Niw0MC43MSw1NC4yOCwxMjkuMSwxODIsMTY3LjEyLDI0NS42NmwuMTkuMzMuMjEuMzJhNjQ1LjY4LDY0NS42OCwwLDAsMSwzOS41Nyw3MS41NEM2ODQuMzQsNzg2LjI3LDYzMS44OCw4MDcuMDUsNTgzLjQzLDgxMy43OVoiLz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik04ODkuNzUsOTA4YS4zOS4zOSwwLDAsMS0uMjcuMTFoLS4wNkM4MDcuMDcsODkzLjkzLDc4Nyw4MTYuODgsNzQzLjA5LDcyM2EzMDcuNDksMzA3LjQ5LDAsMCwwLDIwLjQ1LTU1LjU0YzExLTQxLjExLDE2LjU5LTkwLjYxLDE2LjU5LTE0Ny4xNCwwLTkzLjA4LTEyLjMzLTE3My0zNi42Ni0yMzcuNHEtNC4yMi0xMS4xNi04LjkzLTIxLjdjODIuNzUsOTAuNTksMTY4LjEyLDIwMS4wNSwyMDIuNzUsMjQyLjE5QzEwNDQuNzksNjIwLjU2LDEwMDkuMjcsNzg2Ljg5LDg4OS43NSw5MDhaIi8+PC9zdmc+Cg==
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>icon</code> field defines the icon as a base64 value.</p>
+</div>
+<div class="paragraph">
+<p>In the web console, the icon is displayed on the introductory tile of the quick start on the <strong>Quick Starts</strong> page.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="quick start icon element in the web console">
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="introduction-quick-start-element_create-first-quick-start-tutorial">Introduction element</h5>
+<div class="listingblock">
+<div class="title">Viewing the introduction element in the YAML file</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">...
+  introduction: &gt;-
+    **Spring** is a Java framework for building applications based on a distributed microservices architecture.
+
+    - Spring enables easy packaging and configuration of Spring applications into a self-contained executable application which can be easily deployed as a container to OpenShift.
+
+    - Spring applications can integrate OpenShift capabilities to provide a natural "Spring on OpenShift" developer experience for both existing and net-new Spring applications. For example:
+
+    - Externalized configuration using Kubernetes ConfigMaps and integration with Spring Cloud Kubernetes
+
+    - Service discovery using Kubernetes Services
+
+    - Load balancing with Replication Controllers
+
+    - Kubernetes health probes and integration with Spring Actuator
+
+    - Metrics: Prometheus, Grafana, and integration with Spring Cloud Sleuth
+
+    - Distributed tracing with Istio
+
+    - Developer tooling through Red Hat OpenShift and Red Hat CodeReady developer tooling to quickly scaffold new Spring projects, gain access to familiar Spring APIs in your favorite IDE, and deploy to Red Hat OpenShift
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>introduction</code> field introduces the quick start and lists the tasks within it.</p>
+</div>
+<div class="paragraph">
+<p>In the web console, after you click a quick start card, a side panel slides in that introduces the quick start and lists the tasks within it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="quick start introduction element in the web console">
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
@@ -1847,7 +2122,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:29:15 +0100
+Last updated 2026-10-23 12:05:00 +0100
 </div>
 </div>
 <style>

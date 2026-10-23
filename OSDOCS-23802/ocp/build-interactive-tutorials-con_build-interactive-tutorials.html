@@ -437,8 +437,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
+<!-- navmap-right-toc-start -->
+<style>
+  body.navmap-has-right-toc { padding-right: 18em; }
+  #navmap-right-toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 16em;
+    height: 100%;
+    overflow: auto;
+    padding: 1.25em 1em;
+    background: #f8f8f7;
+    border-left: 1px solid #e7e7e9;
+    z-index: 1000;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    font-size: .9em;
+  }
+  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
+  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
+  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
+  #navmap-right-toc li.level-3 { padding-left: 1em; }
+  #navmap-right-toc li.level-4 { padding-left: 2em; }
+  #navmap-right-toc li.level-5,
+  #navmap-right-toc li.level-6 { padding-left: 3em; }
+  #navmap-right-toc a { text-decoration: none; }
+  @media screen and (max-width: 1023px) {
+    body.navmap-has-right-toc { padding-right: 0; }
+    #navmap-right-toc {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 1em;
+      border: 1px solid #e7e7e9;
+      border-radius: 4px;
+    }
+  }
+
+
+</style>
+<!-- navmap-right-toc-end -->
 </head>
-<body id="build-interactive-tutorials-con_build-interactive-tutorials" class="book toc2 toc-left">
+<body id="build-interactive-tutorials-con_build-interactive-tutorials" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1819,29 +1859,307 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#adding-custom-icon-to-quick-start_build-interactive-tutorials">Add a custom icon to a quick start</a></li><li class="level-4"><a href="#limiting-access-to-quick-starts_build-interactive-tutorials">Limit access to a quick start</a></li><li class="level-4"><a href="#linking-to-other-quick-starts_build-interactive-tutorials">Link to other quick starts</a></li><li class="level-4"><a href="#supported-tags-for-quick-starts_build-interactive-tutorials">Supported tags for quick starts</a></li><li class="level-4"><a href="#quick-start-highlighting-reference_build-interactive-tutorials">Quick start highlighting markdown reference</a></li><li class="level-5"><a href="#quick-start-highlighting-perspective-switcher_build-interactive-tutorials">Perspective switcher</a></li><li class="level-5"><a href="#quick-start-highlighting-admin-perspective_build-interactive-tutorials">Administrator perspective navigation links</a></li><li class="level-5"><a href="#quick-start-highlighting-dev-perspective_build-interactive-tutorials">Developer perspective navigation links</a></li><li class="level-5"><a href="#quick-start-highlighting-common-nav_build-interactive-tutorials">Common navigation links</a></li><li class="level-5"><a href="#quick-start-highlighting-masthead-links_build-interactive-tutorials">Masthead links</a></li><li class="level-4"><a href="#quick-starts-accessing-and-executing-code-snippets_build-interactive-tutorials">Code snippet markdown reference</a></li><li class="level-5"><a href="#quick-starts-syntax-for-inline-code-snippets_build-interactive-tutorials">Syntax for inline code snippets</a></li><li class="level-5"><a href="#quick-starts-syntax-for-multi-line-code-snippets_build-interactive-tutorials">Syntax for multi-line code snippets</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="build-interactive-tutorials-con_build-interactive-tutorials">Building interactive tutorials</h3>
 <div class="paragraph _abstract">
 <p>Learn how to build, customize, and manage interactive quick-start tutorials in Red&#160;Hat OpenShift Container Platform, including adding custom icons, controlling access, linking related tutorials, highlighting UI elements, and executing embedded code snippets.</p>
 </div>
-<div class="paragraph">
-<p>includes::modules/quick-start-adding-custom-icon.adoc[leveloffset=+1]</p>
+<div class="sect3">
+<h4 id="adding-custom-icon-to-quick-start_build-interactive-tutorials">Add a custom icon to a quick start</h4>
+<div class="paragraph _abstract">
+<p>A default icon is provided for all quick starts. You can provide your own custom icon.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Find the <code>.svg</code> file that you want to use as your custom icon.</p>
+</li>
+<li>
+<p>Use an <a href="https://cryptii.com/pipes/text-to-base64">online tool to convert the text to base64</a>.</p>
+</li>
+<li>
+<p>In the YAML file, add <code>icon: &gt;-</code>, then on the next line include <code>data:image/svg+xml;base64</code> followed by the output from the base64 conversion. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">icon: &gt;-
+   data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHJvbGU9ImltZyIgdmlld.</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="limiting-access-to-quick-starts_build-interactive-tutorials">Limit access to a quick start</h4>
+<div class="paragraph _abstract">
+<p>Not all quick starts should be available for everyone. The <code>accessReviewResources</code> section of the YAML file provides the ability to limit access to the quick start.</p>
 </div>
 <div class="paragraph">
-<p>includes::modules/quick-start-limiting-access.adoc[leveloffset=+1]</p>
+<p>To only allow the user to access the quick start if they have the ability to create <code>HelmChartRepository</code> resources, use the following configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">accessReviewResources:
+  - group: helm.openshift.io
+    resource: helmchartrepositories
+    verb: create</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>includes::modules/quick-starts-linking-to-others.adoc[leveloffset=+1]</p>
+<p>To only allow the user to access the quick start if they have the ability to list Operator groups and package manifests, thus ability to install Operators, use the following configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">accessReviewResources:
+  - group: operators.coreos.com
+    resource: operatorgroups
+    verb: list
+  - group: packages.operators.coreos.com
+    resource: packagemanifests
+    verb: list</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="linking-to-other-quick-starts_build-interactive-tutorials">Link to other quick starts</h4>
+<div class="paragraph _abstract">
+<p>You can link a quick start to another quick start by setting the <code>nextQuickStart</code> field.</p>
 </div>
 <div class="paragraph">
-<p>includes::modules/quick-starts-supported-tags.adoc[leveloffset=+1]</p>
+<p>In the <code>nextQuickStart</code> section of the YAML file, enter the <code>name</code>, not the <code>displayName</code>, of the quick start to which you want to link. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">nextQuickStart:
+  - add-healthchecks</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="supported-tags-for-quick-starts_build-interactive-tutorials">Supported tags for quick starts</h4>
+<div class="paragraph _abstract">
+<p>Write your quick start content in markdown using these tags. The markdown is converted to HTML.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tag</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'b',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines bold text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'img',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Embeds an image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'i',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines italic text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'strike',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines strike-through text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'s',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines smaller text</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'del',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines smaller text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'em',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines emphasized text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'strong',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines important text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'a',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines an anchor tag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'p',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines paragraph text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'h1',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a level 1 heading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'h2',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a level 2 heading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'h3',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a level 3 heading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'h4',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a level 4 heading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'ul',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines an unordered list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'ol',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines an ordered list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'li',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a list item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'code',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a text as code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'pre',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a block of preformatted text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'button',</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a button in text.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="quick-start-highlighting-reference_build-interactive-tutorials">Quick start highlighting markdown reference</h4>
+<div class="paragraph _abstract">
+<p>You can use highlighting, or hints, in a quick start to add a link that highlights and animates a component of the web console.</p>
 </div>
 <div class="paragraph">
-<p>includes::modules/quick-starts-highlighting-reference.adoc[leveloffset=+1]</p>
+<p>The markdown syntax contains:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bracketed link text</p>
+</li>
+<li>
+<p>The <code>highlight</code> keyword, followed by the ID of the element that you want to animate</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="quick-start-highlighting-perspective-switcher_build-interactive-tutorials">Perspective switcher</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">[Perspective switcher]{{highlight qs-perspective-switcher}}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="quick-start-highlighting-admin-perspective_build-interactive-tutorials">Administrator perspective navigation links</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">[Home]{{highlight qs-nav-home}}
+[Operators]{{highlight qs-nav-operators}}
+[Workloads]{{highlight qs-nav-workloads}}
+[Serverless]{{highlight qs-nav-serverless}}
+[Networking]{{highlight qs-nav-networking}}
+[Storage]{{highlight qs-nav-storage}}
+[Service catalog]{{highlight qs-nav-servicecatalog}}
+[Compute]{{highlight qs-nav-compute}}
+[User management]{{highlight qs-nav-usermanagement}}
+[Administration]{{highlight qs-nav-administration}}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="quick-start-highlighting-dev-perspective_build-interactive-tutorials">Developer perspective navigation links</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">[Add]{{highlight qs-nav-add}}
+[Topology]{{highlight qs-nav-topology}}
+[Search]{{highlight qs-nav-search}}
+[Project]{{highlight qs-nav-project}}
+[Helm]{{highlight qs-nav-helm}}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="quick-start-highlighting-common-nav_build-interactive-tutorials">Common navigation links</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">[Builds]{{highlight qs-nav-builds}}
+[Pipelines]{{highlight qs-nav-pipelines}}
+[Monitoring]{{highlight qs-nav-monitoring}}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="quick-start-highlighting-masthead-links_build-interactive-tutorials">Masthead links</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text">[CloudShell]{{highlight qs-masthead-cloudshell}}
+[Utility Menu]{{highlight qs-masthead-utilitymenu}}
+[User Menu]{{highlight qs-masthead-usermenu}}
+[Applications]{{highlight qs-masthead-applications}}
+[Import]{{highlight qs-masthead-import}}
+[Help]{{highlight qs-masthead-help}}
+[Notifications]{{highlight qs-masthead-notifications}}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="quick-starts-accessing-and-executing-code-snippets_build-interactive-tutorials">Code snippet markdown reference</h4>
+<div class="paragraph _abstract">
+<p>Embed executable and copyable CLI code snippets in a quick start using this markdown syntax. Executing a snippet requires the Web Terminal Operator; copying works with or without it installed.</p>
+</div>
+<div class="sect4">
+<h5 id="quick-starts-syntax-for-inline-code-snippets_build-interactive-tutorials">Syntax for inline code snippets</h5>
+<div class="listingblock">
+<div class="content">
+<pre>`code block`{{copy}}
+`code block`{{execute}}</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>includes::modules/quick-starts-accessing-and-executing-code-snippets.adoc[leveloffset=+1]</p>
+<p>If the <code>execute</code> syntax is used, the <strong>Copy to clipboard</strong> action is present whether you have the Web Terminal Operator installed or not.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="quick-starts-syntax-for-multi-line-code-snippets_build-interactive-tutorials">Syntax for multi-line code snippets</h5>
+<div class="listingblock">
+<div class="content">
+<pre>```
+multi line code block
+```{{copy}}
+
+```
+multi line code block
+```{{execute}}</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
@@ -1856,7 +2174,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:29:15 +0100
+Last updated 2026-10-23 12:05:00 +0100
 </div>
 </div>
 <style>

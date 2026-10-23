@@ -437,8 +437,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
+<!-- navmap-right-toc-start -->
+<style>
+  body.navmap-has-right-toc { padding-right: 18em; }
+  #navmap-right-toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 16em;
+    height: 100%;
+    overflow: auto;
+    padding: 1.25em 1em;
+    background: #f8f8f7;
+    border-left: 1px solid #e7e7e9;
+    z-index: 1000;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    font-size: .9em;
+  }
+  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
+  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
+  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
+  #navmap-right-toc li.level-3 { padding-left: 1em; }
+  #navmap-right-toc li.level-4 { padding-left: 2em; }
+  #navmap-right-toc li.level-5,
+  #navmap-right-toc li.level-6 { padding-left: 3em; }
+  #navmap-right-toc a { text-decoration: none; }
+  @media screen and (max-width: 1023px) {
+    body.navmap-has-right-toc { padding-right: 0; }
+    #navmap-right-toc {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 1em;
+      border: 1px solid #e7e7e9;
+      border-radius: 4px;
+    }
+  }
+
+
+</style>
+<!-- navmap-right-toc-end -->
 </head>
-<body id="interactive-in-app-tutorial-con_interactive-in-app-tutorial" class="book toc2 toc-left">
+<body id="interactive-in-app-tutorial-con_interactive-in-app-tutorial" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -1819,20 +1859,174 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#understanding-quick-starts_interactive-in-app-tutorial">Create quick start tutorials in the web console</a></li><li class="level-4"><a href="#quick-start-user-workflow_interactive-in-app-tutorial">Quick start user workflow</a></li><li class="level-4"><a href="#quick-start-components_interactive-in-app-tutorial">Quick start components</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
 <h3 id="interactive-in-app-tutorial-con_interactive-in-app-tutorial">Building interactive tutorials</h3>
 <div class="paragraph _abstract">
 <p>Learn how interactive in-app tutorials guide users through workflows directly within the console. Discover the core concepts, user navigation experience, and essential component structure of quick starts.</p>
 </div>
-<div class="paragraph">
-<p>includes::modules/understanding-quick-starts.adoc[leveloffset=+1]</p>
+<div class="sect3">
+<h4 id="understanding-quick-starts_interactive-in-app-tutorial">Create quick start tutorials in the web console</h4>
+<div class="paragraph _abstract">
+<p>A quick start is a guided tutorial with user tasks. In the web console, you can access quick starts under the <strong>Help</strong> menu. They are especially useful for getting oriented with an application, Operator, or other product offering.</p>
 </div>
 <div class="paragraph">
-<p>includes::modules/quick-start-user-workflow.adoc[leveloffset=+1]</p>
+<p>A quick start primarily consists of tasks and steps. Each task has multiple steps, and each quick start has multiple tasks. For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Task 1</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Step 1</p>
+</li>
+<li>
+<p>Step 2</p>
+</li>
+<li>
+<p>Step 3</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Task 2</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Step 1</p>
+</li>
+<li>
+<p>Step 2</p>
+</li>
+<li>
+<p>Step 3</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Task 3</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Step 1</p>
+</li>
+<li>
+<p>Step 2</p>
+</li>
+<li>
+<p>Step 3</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="quick-start-user-workflow_interactive-in-app-tutorial">Quick start user workflow</h4>
+<div class="paragraph _abstract">
+<p>When you interact with an existing quick start tutorial, this is the expected workflow experience:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <strong>Administrator</strong> or <strong>Developer</strong> perspective, click the <strong>Help icon</strong> and select <strong>Quick Starts</strong>.</p>
+</li>
+<li>
+<p>Click a quick start card.</p>
+</li>
+<li>
+<p>In the panel that is displayed, click <strong>Start</strong>.</p>
+</li>
+<li>
+<p>Complete the on-screen instructions, then click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Check your work</strong> module that is displayed, answer the question to confirm that you successfully completed the task.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If you select <strong>Yes</strong>, click <strong>Next</strong> to continue to the next task.</p>
+</li>
+<li>
+<p>If you select <strong>No</strong>, repeat the task instructions and check your work again.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Repeat steps 1 through 6 above to complete the remaining tasks in the quick start.</p>
+</li>
+<li>
+<p>After completing the final task, click <strong>Close</strong> to close the quick start.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="quick-start-components_interactive-in-app-tutorial">Quick start components</h4>
+<div class="paragraph _abstract">
+<p>A quick start consists of various components, such as cards, introductions, task headings, and more.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Card</strong>: The catalog tile that provides the basic information of the quick start, including title, description, time commitment, and completion status</p>
+</li>
+<li>
+<p><strong>Introduction</strong>: A brief overview of the goal and tasks of the quick start</p>
+</li>
+<li>
+<p><strong>Task headings</strong>: Hyper-linked titles for each task in the quick start</p>
+</li>
+<li>
+<p><strong>Check your work module</strong>: A module for a user to confirm that they completed a task successfully before advancing to the next task in the quick start</p>
+</li>
+<li>
+<p><strong>Hints</strong>: An animation to help users identify specific areas of the product</p>
+</li>
+<li>
+<p><strong>Buttons</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Next and back buttons</strong>: Buttons for navigating the steps and modules within each task of a quick start</p>
+</li>
+<li>
+<p><strong>Final screen buttons</strong>: Buttons for closing the quick start, going back to previous tasks within the quick start, and viewing all quick starts</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>includes::modules/quick-start-components.adoc[leveloffset=+1]</p>
+<p>The main content area of a quick start includes the following sections:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Card copy</strong></p>
+</li>
+<li>
+<p><strong>Introduction</strong></p>
+</li>
+<li>
+<p><strong>Task steps</strong></p>
+</li>
+<li>
+<p><strong>Modals and in-app messaging</strong></p>
+</li>
+<li>
+<p><strong>Check your work module</strong></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
@@ -1841,7 +2035,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-23 11:29:15 +0100
+Last updated 2026-10-23 12:05:00 +0100
 </div>
 </div>
 <style>
