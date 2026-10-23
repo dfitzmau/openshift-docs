@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes" class="book toc2 toc-left navmap-has-right-toc">
+<body id="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -524,6 +524,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a>
 </li>
+<li><a href="how-etcd-works_how-etcd-works.html">How etcd works</a>
+</li>
+<li><a href="interactive-in-app-tutorial-con_interactive-in-app-tutorial.html">Building interactive tutorials</a>
+</li>
 </ul>
 </li>
 <li><a href="_get_started.html">Get started</a>
@@ -538,6 +542,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
+</li>
+<li><a href="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial.html">Create your first quick start tutorial</a>
 </li>
 </ul>
 </li>
@@ -592,6 +598,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+</li>
+<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
 </li>
 </ul>
 </li>
@@ -1027,7 +1035,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="kmm-day0-day2-installation_manage-kmm-day0-day2-lifecycle.html">Day 0 through Day 2 kmod installation</a>
+</li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
+</li>
+<li><a href="kmm-hub-kmm-hub_install-and-use-kmm-hub.html">KMM-Hub</a>
+</li>
+<li><a href="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files.html">Defining full paths</a>
+</li>
+<li><a href="kmm-must-gather-tool_gather-diagnostic-data-for-kmm.html">Using the must-gather tool</a>
 </li>
 <li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
@@ -1160,6 +1176,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
 <li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
+</li>
+<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
+</li>
+<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
+</li>
+<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
 </li>
 </ul>
 </li>
@@ -1406,6 +1428,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
 </li>
+<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1478,15 +1502,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-database-size_scale-etcd-database-size.html">Determine the size of the etcd database and understand its effects</a>
 </li>
-<li><a href="how-etcd-works_understand-etcd-performance-factors.html">How etcd works</a>
+<li><a href="understand-etcd-performance_understand-etcd-performance-factors.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
+<li><a href="make-changes-to-the-kubelet-settings-on-my-nodes-overview_make-changes-to-the-kubelet-settings-on-my-nodes.html">Allocate resources to nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
-</li>
-<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
 </li>
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
@@ -1508,8 +1530,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scalability-and-performance-recommended-practices_optimize-cluster-performance-across-subsystems.html">Recommended performance and scalability practices</a>
 </li>
-<li><a href="machine-config-pin-preload-images_reduce-image-pull-time.html">Pin images</a>
-</li>
 <li><a href="add-cri-o-storage-locations-for-faster-container-startup-con_add-cri-o-storage-locations-for-faster-container-startup.html">Add CRI-O storage locations for faster container startup</a>
 </li>
 <li><a href="nodes-pods-adjust-resources-in-place-about_adjust-pod-resource-levels-without-pod-disruption.html">About in-place pod resizing</a>
@@ -1520,27 +1540,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
-<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
-</li>
 <li><a href="nodes-cluster-overcommit-about_control-the-level-of-overcommitted-pods.html">Understanding overcommitment</a>
 </li>
 <li><a href="nodes-nodes-parallel-container-pulls-about_configure-parallel-configuration-image-pulls.html">About configuring parallel container image pulls</a>
 </li>
 <li><a href="nodes-nodes-kernel-arguments_customize-kernel-behavior.html">Add kernel arguments to nodes</a>
 </li>
-<li><a href="nodes-cluster-worker-latency-profiles-about_improve-cluster-stability-in-high-latency-environments.html">Understanding worker latency profiles</a>
-</li>
-<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
-</li>
 <li><a href="rodoo-about_run-once-duration-override-operator.html">About the Run Once Duration Override Operator</a>
 </li>
-<li><a href="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes.html"><span class="toc-current">Configure node pools for hosted control planes</span></a>
+<li><a href="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes.html"><span class="toc-current">Scale hosted clusters</span></a>
 </li>
-<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
-</li>
-<li><a href="nodes-nodes-kernel-arguments_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">Add kernel arguments to nodes</a>
-</li>
-<li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+<li><a href="cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">About Hyper-Threading for low latency and real-time applications</a>
 </li>
 <li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
@@ -1552,23 +1562,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
-</li>
-<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+<li><a href="reserve-capacity-for-planned-workloads-overview_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads on AWS and Azure</a>
 </li>
 <li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
 </li>
 <li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
 </li>
-<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
-</li>
 <li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
 </li>
-<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-overview_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for machines on vSphere</a>
 </li>
 <li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
@@ -1587,7 +1589,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Create quick start tutorials in the web console</a>
+<li><a href="build-interactive-tutorials-con_build-interactive-tutorials.html">Building interactive tutorials</a>
+</li>
+<li><a href="create-quick-start-tutorials-con_create-quick-start-tutorials.html">Create quick-start tutorials</a>
 </li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
 </li>
@@ -1855,10 +1859,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#hcp-kubeconf-nodepool_machine-configuration-for-hosted-control-planes">Reference the kubelet configuration in node pools</a></li><li class="level-4"><a href="#node-tuning-hosted-cluster_machine-configuration-for-hosted-control-planes">Configure node tuning in a hosted cluster</a></li><li class="level-4"><a href="#sriov-operator-hosted-control-planes_machine-configuration-for-hosted-control-planes">Deploy the SR-IOV Operator for hosted control planes</a></li><li class="level-4"><a href="#hcp-configure-ntp_machine-configuration-for-hosted-control-planes">Configure the NTP server for hosted clusters</a></li><li class="level-4"><a href="#scale-down-data-plane_machine-configuration-for-hosted-control-planes">Scale down the data plane to zero</a></li><li class="level-4"><a href="#scale-up-down-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Scale up and down workloads in a hosted cluster</a></li><li class="level-4"><a href="#scale-up-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Scale up workloads in a hosted cluster</a></li><li class="level-4"><a href="#hcp-autoscaling-to-from-zero_machine-configuration-for-hosted-control-planes">Autoscaling to and from zero on hosted control planes node pools</a></li><li class="level-5"><a href="#hcp-autoscaling-terminology_machine-configuration-for-hosted-control-planes">Terminology</a></li><li class="level-5"><a href="#hcp-scale-to-zero-use-cases_machine-configuration-for-hosted-control-planes">Use cases for scale-to-zero autoscaling</a></li><li class="level-5"><a href="#hcp-scale-to-zero-best-practices_machine-configuration-for-hosted-control-planes">Best practices for scale-to-zero autoscaling</a></li><li class="level-5"><a href="#hcp-autoscaling-to-from-zero-configure_machine-configuration-for-hosted-control-planes">Configure autoscaling to and from zero on hosted control planes node pools</a></li><li class="level-5"><a href="#hcp-autoscaling-nodepool-reference_machine-configuration-for-hosted-control-planes">NodePool autoscaling configuration reference</a></li><li class="level-5"><a href="#hcp-nodepool-api-reference_machine-configuration-for-hosted-control-planes">NodePool API reference for autoscaling</a></li><li class="level-6"><a href="#hcp-nodepool-api-spec-autoscaling_machine-configuration-for-hosted-control-planes">spec.autoScaling</a></li><li class="level-6"><a href="#hcp-nodepool-api-spec-replicas_machine-configuration-for-hosted-control-planes">spec.replicas</a></li><li class="level-6"><a href="#hcp-nodepool-api-drain-detach-timeouts_machine-configuration-for-hosted-control-planes">Drain and detach timeouts</a></li><li class="level-6"><a href="#hcp-nodepool-api-status-conditions_machine-configuration-for-hosted-control-planes">status.conditions</a></li><li class="level-6"><a href="#hcp-nodepool-api-sm-operator-flags_machine-configuration-for-hosted-control-planes">HyperShift Operator flags</a></li><li class="level-4"><a href="#priority-expander-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Set the priority expander in a hosted cluster</a></li><li class="level-4"><a href="#balance-ignored-labels-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Balance ignored labels in a hosted cluster</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes">Configure node pools for hosted control planes</a></li><li class="level-4"><a href="#scale-down-data-plane_machine-configuration-for-hosted-control-planes">Scale down the data plane to zero</a></li><li class="level-4"><a href="#scale-up-down-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Scale up and down workloads in a hosted cluster</a></li><li class="level-4"><a href="#scale-up-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Scale up workloads in a hosted cluster</a></li><li class="level-4"><a href="#hcp-autoscaling-to-from-zero_machine-configuration-for-hosted-control-planes">Autoscaling to and from zero on hosted control planes node pools</a></li><li class="level-5"><a href="#hcp-autoscaling-terminology_machine-configuration-for-hosted-control-planes">Terminology</a></li><li class="level-5"><a href="#hcp-scale-to-zero-use-cases_machine-configuration-for-hosted-control-planes">Use cases for scale-to-zero autoscaling</a></li><li class="level-5"><a href="#hcp-scale-to-zero-best-practices_machine-configuration-for-hosted-control-planes">Best practices for scale-to-zero autoscaling</a></li><li class="level-5"><a href="#hcp-autoscaling-to-from-zero-configure_machine-configuration-for-hosted-control-planes">Configure autoscaling to and from zero on hosted control planes node pools</a></li><li class="level-5"><a href="#hcp-autoscaling-nodepool-reference_machine-configuration-for-hosted-control-planes">NodePool autoscaling configuration reference</a></li><li class="level-5"><a href="#hcp-nodepool-api-reference_machine-configuration-for-hosted-control-planes">NodePool API reference for autoscaling</a></li><li class="level-6"><a href="#hcp-nodepool-api-spec-autoscaling_machine-configuration-for-hosted-control-planes">spec.autoScaling</a></li><li class="level-6"><a href="#hcp-nodepool-api-spec-replicas_machine-configuration-for-hosted-control-planes">spec.replicas</a></li><li class="level-6"><a href="#hcp-nodepool-api-drain-detach-timeouts_machine-configuration-for-hosted-control-planes">Drain and detach timeouts</a></li><li class="level-6"><a href="#hcp-nodepool-api-status-conditions_machine-configuration-for-hosted-control-planes">status.conditions</a></li><li class="level-6"><a href="#hcp-nodepool-api-sm-operator-flags_machine-configuration-for-hosted-control-planes">HyperShift Operator flags</a></li><li class="level-4"><a href="#priority-expander-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Set the priority expander in a hosted cluster</a></li><li class="level-4"><a href="#balance-ignored-labels-autoscaler-hcp_machine-configuration-for-hosted-control-planes">Balance ignored labels in a hosted cluster</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes">Configure node pools for hosted control planes</h3>
+<h3 id="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes">Scale hosted clusters</h3>
+<div class="paragraph _abstract">
+<p>You can scale hosted clusters by changing the number of nodes in a node pool or configuring autoscaling. Use autoscaler settings to control how node pools respond to workload demand.</p>
+</div>
+<div class="sect3">
+<h4 id="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes">Configure node pools for hosted control planes</h4>
 <div class="paragraph _abstract">
 <p>In hosted control planes, you can configure node pools by creating a <code>MachineConfig</code> object inside of a config map in the management cluster.</p>
 </div>
@@ -1929,556 +1938,6 @@ spec:
 </div>
 </li>
 </ol>
-</div>
-<div class="sect3">
-<h4 id="hcp-kubeconf-nodepool_machine-configuration-for-hosted-control-planes">Reference the kubelet configuration in node pools</h4>
-<div class="paragraph _abstract">
-<p>To reference your kubelet configuration in node pools, you add the kubelet configuration in a config map and then apply the config map in the <code>NodePool</code> resource.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Add the kubelet configuration inside of a config map in the management cluster by entering the following information:</p>
-<div class="listingblock">
-<div class="title">Example <code>ConfigMap</code> object with the kubelet configuration</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: &lt;configmap_name&gt;
-  namespace: clusters
-data:
-  config: |
-    apiVersion: machineconfiguration.openshift.io/v1
-    kind: KubeletConfig
-    metadata:
-      name: &lt;kubeletconfig_name&gt;
-    spec:
-      kubeletConfig:
-        registerWithTaints:
-        - key: "example.sh/unregistered"
-          value: "true"
-          effect: "NoExecute"</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>&lt;configmap_name&gt;</code> specifies the name of your config map.</p>
-</li>
-<li>
-<p><code>&lt;kubeletconfig_name&gt;</code> specifies the name of the <code>KubeletConfig</code> resource.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Apply the config map to the node pool by entering the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">$ oc edit nodepool &lt;nodepool_name&gt; --namespace clusters</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;nodepool_name&gt;</code> with the name of your node pool.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example <code>NodePool</code> resource configuration</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: hypershift.openshift.io/v1alpha1
-kind: NodePool
-metadata:
-# ...
-  name: nodepool-1
-  namespace: clusters
-# ...
-spec:
-  config:
-  - name: example-configmap-1
-# ...</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="node-tuning-hosted-cluster_machine-configuration-for-hosted-control-planes">Configure node tuning in a hosted cluster</h4>
-<div class="paragraph _abstract">
-<p>To set node-level tuning on the nodes in your hosted cluster, you can use the Node Tuning Operator. In hosted control planes, you can configure node tuning by creating config maps that contain <code>Tuned</code> objects and referencing those config maps in your node pools.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a config map that contains a valid tuned manifest, and reference the manifest in a node pool. In the following example, a <code>Tuned</code> manifest defines a profile that sets <code>vm.dirty_ratio</code> to 55 on nodes that contain the <code>tuned-1-node-label</code> node label with any value. Save the following <code>ConfigMap</code> manifest in a file named <code>tuned-1.yaml</code>:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">    apiVersion: v1
-    kind: ConfigMap
-    metadata:
-      name: tuned-1
-      namespace: clusters
-    data:
-      tuning: |
-        apiVersion: tuned.openshift.io/v1
-        kind: Tuned
-        metadata:
-          name: tuned-1
-          namespace: openshift-cluster-node-tuning-operator
-        spec:
-          profile:
-          - data: |
-              [main]
-              summary=Custom OpenShift profile
-              include=openshift-node
-              [sysctl]
-              vm.dirty_ratio="55"
-            name: tuned-1-profile
-          recommend:
-          - priority: 20
-            profile: tuned-1-profile</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you do not add any labels to an entry in the <code>spec.recommend</code> section of the Tuned spec, node-pool-based matching is assumed, so the highest priority profile in the <code>spec.recommend</code> section is applied to nodes in the pool. Although you can achieve more fine-grained node-label-based matching by setting a label value in the Tuned <code>.spec.recommend.match</code> section, node labels will not persist during an upgrade unless you set the <code>.spec.management.upgradeType</code> value of the node pool to <code>InPlace</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Create the <code>ConfigMap</code> object in the management cluster:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig="$MGMT_KUBECONFIG" create -f tuned-1.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Reference the <code>ConfigMap</code> object in the <code>spec.tuningConfig</code> field of the node pool, either by editing a node pool or creating one. In this example, assume that you have only one <code>NodePool</code>, named <code>nodepool-1</code>, which contains 2 nodes.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">    apiVersion: hypershift.openshift.io/v1alpha1
-    kind: NodePool
-    metadata:
-      ...
-      name: nodepool-1
-      namespace: clusters
-    ...
-    spec:
-      ...
-      tuningConfig:
-      - name: tuned-1
-    status:
-    ...</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You can reference the same config map in multiple node pools. In hosted control planes, the Node Tuning Operator appends a hash of the node pool name and namespace to the name of the Tuned CRs to distinguish them. Outside of this case, do not create multiple TuneD profiles of the same name in different Tuned CRs for the same hosted cluster.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<div class="title">Verification</div>
-<p>Now that you have created the <code>ConfigMap</code> object that contains a <code>Tuned</code> manifest and referenced it in a <code>NodePool</code>, the Node Tuning Operator syncs the <code>Tuned</code> objects into the hosted cluster. You can verify which <code>Tuned</code> objects are defined and which TuneD profiles are applied to each node.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>List the <code>Tuned</code> objects in the hosted cluster:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig="$HC_KUBECONFIG" get tuned.tuned.openshift.io \
-  -n openshift-cluster-node-tuning-operator</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME       AGE
-default    7m36s
-rendered   7m36s
-tuned-1    65s</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>List the <code>Profile</code> objects in the hosted cluster:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig="$HC_KUBECONFIG" get profile.tuned.openshift.io \
-  -n openshift-cluster-node-tuning-operator</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                           TUNED            APPLIED   DEGRADED   AGE
-nodepool-1-worker-1            tuned-1-profile  True      False      7m43s
-nodepool-1-worker-2            tuned-1-profile  True      False      7m14s</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If no custom profiles are created, the <code>openshift-node</code> profile is applied by default.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>To confirm that the tuning was applied correctly, start a debug shell on a node and check the sysctl values:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc --kubeconfig="$HC_KUBECONFIG" \
-  debug node/nodepool-1-worker-1 -- chroot /host sysctl vm.dirty_ratio</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">vm.dirty_ratio = 55</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="sriov-operator-hosted-control-planes_machine-configuration-for-hosted-control-planes">Deploy the SR-IOV Operator for hosted control planes</h4>
-<div class="paragraph _abstract">
-<p>After you configure and deploy your hosting service cluster, you can create a subscription to the SR-IOV Operator on a hosted cluster. The SR-IOV pod runs on worker machines rather than the control plane.</p>
-</div>
-<div class="paragraph">
-<div class="title">Prerequisites</div>
-<p>You must configure and deploy the hosted cluster on AWS.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a namespace and an Operator group:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: Namespace
-metadata:
-  name: openshift-sriov-network-operator
----
-apiVersion: operators.coreos.com/v1
-kind: OperatorGroup
-metadata:
-  name: sriov-network-operators
-  namespace: openshift-sriov-network-operator
-spec:
-  targetNamespaces:
-  - openshift-sriov-network-operator</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Create a subscription to the SR-IOV Operator:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: operators.coreos.com/v1alpha1
-kind: Subscription
-metadata:
-  name: sriov-network-operator-subsription
-  namespace: openshift-sriov-network-operator
-spec:
-  channel: stable
-  name: sriov-network-operator
-  config:
-    nodeSelector:
-      node-role.kubernetes.io/worker: ""
-  source: redhat-operators
-  sourceNamespace: openshift-marketplace</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<div class="title">Verification</div>
-<ol class="arabic">
-<li>
-<p>To verify that the SR-IOV Operator is ready, run the following command and view the resulting output:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get csv -n openshift-sriov-network-operator</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                         DISPLAY                   VERSION               REPLACES                                     PHASE
-sriov-network-operator.{product-version}.0-202211021237   SR-IOV Network Operator   {product-version}.0-202211021237   sriov-network-operator.{product-version}.0-202210290517   Succeeded</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>To verify that the SR-IOV pods are deployed, run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n openshift-sriov-network-operator</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="hcp-configure-ntp_machine-configuration-for-hosted-control-planes">Configure the NTP server for hosted clusters</h4>
-<div class="paragraph _abstract">
-<p>You can configure the Network Time Protocol (NTP) server for your hosted clusters by using Butane.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create a Butane config file, <code>99-worker-chrony.bu</code>, that includes the contents of the <code>chrony.conf</code> file. For more information about Butane, see "Creating machine configs with Butane".</p>
-<div class="listingblock">
-<div class="title">Example <code>99-worker-chrony.bu</code> configuration</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml"># ...
-variant: openshift
-version: {product-version}.0
-metadata:
-  name: 99-worker-chrony
-  labels:
-    machineconfiguration.openshift.io/role: worker
-storage:
-  files:
-  - path: /etc/chrony.conf
-    mode: 0644
-    overwrite: true
-    contents:
-      inline: |
-        pool 0.rhel.pool.ntp.org iburst
-        driftfile /var/lib/chrony/drift
-        makestep 1.0 3
-        rtcsync
-        logdir /var/log/chrony
-# ...</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>storage.files.mode</code> specifies an octal value mode for the <code>mode</code> field in the machine config file. After you create the file and apply the changes, the <code>mode</code> field is converted to a decimal value.</p>
-</li>
-<li>
-<p><code>storage.files.contents.inline</code> specifies any valid, reachable time source, such as the one provided by your Dynamic Host Configuration Protocol (DHCP) server.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>For machine-to-machine communication, the NTP on the User Datagram Protocol (UDP) port is <code>123</code>. If you configured an external NTP time server, you must open UDP port <code>123</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Use Butane to generate a <code>MachineConfig</code> object file, <code>99-worker-chrony.yaml</code>, that contains a configuration that Butane sends to the nodes. Run the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ butane 99-worker-chrony.bu -o 99-worker-chrony.yaml</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example <code>99-worker-chrony.yaml</code> configuration</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml"># Generated by Butane; do not edit
-apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfig
-metadata:
-  labels:
-    machineconfiguration.openshift.io/role: worker
-  name: &lt;machineconfig_name&gt;
-spec:
-  config:
-    ignition:
-      version: 3.2.0
-    storage:
-      files:
-        - contents:
-            source: data:...
-          mode: 420
-          overwrite: true
-          path: /example/path</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Add the contents of the <code>99-worker-chrony.yaml</code> file inside of a config map in the management cluster:</p>
-<div class="listingblock">
-<div class="title">Example config map</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: &lt;configmap_name&gt;
-  namespace: &lt;namespace&gt;
-data:
-  config: |
-    apiVersion: machineconfiguration.openshift.io/v1
-    kind: MachineConfig
-    metadata:
-      labels:
-        machineconfiguration.openshift.io/role: worker
-      name: &lt;machineconfig_name&gt;
-    spec:
-      config:
-        ignition:
-          version: 3.2.0
-        storage:
-          files:
-          - contents:
-              source: data:...
-            mode: 420
-            overwrite: true
-            path: /example/path
-# ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;namespace&gt;</code> with the name of your namespace where you created the node pool, such as <code>clusters</code>.</p>
-</div>
-</li>
-<li>
-<p>Apply the config map to your node pool by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit nodepool &lt;nodepool_name&gt; --namespace &lt;hosted_cluster_namespace&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example <code>NodePool</code> configuration</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: hypershift.openshift.io/v1alpha1
-kind: NodePool
-metadata:
-# ...
-  name: nodepool-1
-  namespace: clusters
-# ...
-spec:
-  config:
-  - name: example-config-map
-# ...</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Add the list of your NTP servers in the <code>infra-env.yaml</code> file, which defines the <code>InfraEnv</code> custom resource (CR):</p>
-<div class="listingblock">
-<div class="title">Example <code>infra-env.yaml</code> file</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: agent-install.openshift.io/v1beta1
-kind: InfraEnv
-# ...
-spec:
-  additionalNTPSources:
-  - &lt;ntp_server&gt;
-  - &lt;ntp_server1&gt;
-  - &lt;ntp_server2&gt;
-# ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Replace <code>&lt;ntp_server&gt;</code> with the name of your NTP server. For more details about creating a host inventory and the <code>InfraEnv</code> CR, see "Creating a host inventory".</p>
-</div>
-</li>
-<li>
-<p>Apply the <code>InfraEnv</code> CR by running the following command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc apply -f infra-env.yaml</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>Check the following fields to know the status of your host inventory:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>conditions</code>:  The standard Kubernetes conditions indicating if the image was created successfully.</p>
-</li>
-<li>
-<p><code>isoDownloadURL</code>: The URL to download the Discovery Image.</p>
-</li>
-<li>
-<p><code>createdTime</code>: The time at which the image was last created. If you modify the <code>InfraEnv</code> CR, ensure that you have updated the timestamp before downloading a new image.</p>
-<div class="paragraph">
-<p>Verify that your host inventory is created by running the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe infraenv &lt;infraenv_resource_name&gt; -n &lt;infraenv_namespace&gt;</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you modify the <code>InfraEnv</code> CR, confirm that the <code>InfraEnv</code> CR has created a new Discovery Image by looking at the <code>createdTime</code> field. If you already booted hosts, boot them again with the latest Discovery Image.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect3">
@@ -3539,7 +2998,7 @@ data:
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="rodoo-about_run-once-duration-override-operator.html">About the Run Once Duration Override Operator</a> | ↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a> →</p>
+<p>← Previous: <a href="rodoo-about_run-once-duration-override-operator.html">About the Run Once Duration Override Operator</a> | ↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">About Hyper-Threading for low latency and real-time applications</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -3550,7 +3009,7 @@ data:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 16:07:50 +0100
+Last updated 2026-10-23 10:28:08 +0100
 </div>
 </div>
 <style>

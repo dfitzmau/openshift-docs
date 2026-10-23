@@ -437,48 +437,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
-<!-- navmap-right-toc-start -->
-<style>
-  body.navmap-has-right-toc { padding-right: 18em; }
-  #navmap-right-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 16em;
-    height: 100%;
-    overflow: auto;
-    padding: 1.25em 1em;
-    background: #f8f8f7;
-    border-left: 1px solid #e7e7e9;
-    z-index: 1000;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-size: .9em;
-  }
-  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
-  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
-  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
-  #navmap-right-toc li.level-3 { padding-left: 1em; }
-  #navmap-right-toc li.level-4 { padding-left: 2em; }
-  #navmap-right-toc li.level-5,
-  #navmap-right-toc li.level-6 { padding-left: 3em; }
-  #navmap-right-toc a { text-decoration: none; }
-  @media screen and (max-width: 1023px) {
-    body.navmap-has-right-toc { padding-right: 0; }
-    #navmap-right-toc {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 1em;
-      border: 1px solid #e7e7e9;
-      border-radius: 4px;
-    }
-  }
-
-
-</style>
-<!-- navmap-right-toc-end -->
 </head>
-<body id="nodes-cluster-worker-latency-profiles-about_improve-cluster-stability-in-high-latency-environments" class="book toc2 toc-left navmap-has-right-toc">
+<body id="how-etcd-works_how-etcd-works" class="book toc2 toc-left">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -496,7 +456,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_discover.html">Discover</a>
-
 <ul class="sectlevel2">
 <li><a href="understand-platform-architecture-con_understand-platform-architecture.html">Understand platform architecture</a>
 </li>
@@ -524,6 +483,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a>
 </li>
+<li><a href="how-etcd-works_how-etcd-works.html"><span class="toc-current">How etcd works</span></a>
+</li>
+<li><a href="interactive-in-app-tutorial-con_interactive-in-app-tutorial.html">Building interactive tutorials</a>
+</li>
 </ul>
 </li>
 <li><a href="_get_started.html">Get started</a>
@@ -538,6 +501,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
+</li>
+<li><a href="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial.html">Create your first quick start tutorial</a>
 </li>
 </ul>
 </li>
@@ -592,6 +557,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+</li>
+<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
 </li>
 </ul>
 </li>
@@ -1027,7 +994,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="kmm-day0-day2-installation_manage-kmm-day0-day2-lifecycle.html">Day 0 through Day 2 kmod installation</a>
+</li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
+</li>
+<li><a href="kmm-hub-kmm-hub_install-and-use-kmm-hub.html">KMM-Hub</a>
+</li>
+<li><a href="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files.html">Defining full paths</a>
+</li>
+<li><a href="kmm-must-gather-tool_gather-diagnostic-data-for-kmm.html">Using the must-gather tool</a>
 </li>
 <li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
@@ -1160,6 +1135,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
 <li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
+</li>
+<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
+</li>
+<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
+</li>
+<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
 </li>
 </ul>
 </li>
@@ -1406,6 +1387,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
 </li>
+<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1457,6 +1440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_optimize.html">Optimize</a>
+
 <ul class="sectlevel2">
 <li><a href="about-node-tuning-operator_node-tuning-operator.html">Node Tuning Operator</a>
 </li>
@@ -1478,15 +1462,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-database-size_scale-etcd-database-size.html">Determine the size of the etcd database and understand its effects</a>
 </li>
-<li><a href="how-etcd-works_understand-etcd-performance-factors.html">How etcd works</a>
+<li><a href="understand-etcd-performance_understand-etcd-performance-factors.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
+<li><a href="make-changes-to-the-kubelet-settings-on-my-nodes-overview_make-changes-to-the-kubelet-settings-on-my-nodes.html">Allocate resources to nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
-</li>
-<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
 </li>
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
@@ -1508,8 +1490,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scalability-and-performance-recommended-practices_optimize-cluster-performance-across-subsystems.html">Recommended performance and scalability practices</a>
 </li>
-<li><a href="machine-config-pin-preload-images_reduce-image-pull-time.html">Pin images</a>
-</li>
 <li><a href="add-cri-o-storage-locations-for-faster-container-startup-con_add-cri-o-storage-locations-for-faster-container-startup.html">Add CRI-O storage locations for faster container startup</a>
 </li>
 <li><a href="nodes-pods-adjust-resources-in-place-about_adjust-pod-resource-levels-without-pod-disruption.html">About in-place pod resizing</a>
@@ -1520,27 +1500,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
-<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
-</li>
 <li><a href="nodes-cluster-overcommit-about_control-the-level-of-overcommitted-pods.html">Understanding overcommitment</a>
 </li>
 <li><a href="nodes-nodes-parallel-container-pulls-about_configure-parallel-configuration-image-pulls.html">About configuring parallel container image pulls</a>
 </li>
 <li><a href="nodes-nodes-kernel-arguments_customize-kernel-behavior.html">Add kernel arguments to nodes</a>
 </li>
-<li><a href="nodes-cluster-worker-latency-profiles-about_improve-cluster-stability-in-high-latency-environments.html"><span class="toc-current">Understanding worker latency profiles</span></a>
-</li>
-<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
-</li>
 <li><a href="rodoo-about_run-once-duration-override-operator.html">About the Run Once Duration Override Operator</a>
 </li>
-<li><a href="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes.html">Configure node pools for hosted control planes</a>
+<li><a href="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes.html">Scale hosted clusters</a>
 </li>
-<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
-</li>
-<li><a href="nodes-nodes-kernel-arguments_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">Add kernel arguments to nodes</a>
-</li>
-<li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+<li><a href="cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">About Hyper-Threading for low latency and real-time applications</a>
 </li>
 <li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
@@ -1552,23 +1522,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
-</li>
-<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+<li><a href="reserve-capacity-for-planned-workloads-overview_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads on AWS and Azure</a>
 </li>
 <li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
 </li>
 <li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
 </li>
-<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
-</li>
 <li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
 </li>
-<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-overview_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for machines on vSphere</a>
 </li>
 <li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
@@ -1587,7 +1549,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Create quick start tutorials in the web console</a>
+<li><a href="build-interactive-tutorials-con_build-interactive-tutorials.html">Building interactive tutorials</a>
+</li>
+<li><a href="create-quick-start-tutorials-con_create-quick-start-tutorials.html">Create quick-start tutorials</a>
 </li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
 </li>
@@ -1855,222 +1819,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#nodes-cluster-worker-latency-profiles-using-at-creation_improve-cluster-stability-in-high-latency-environments">Implement worker latency profiles at cluster creation</a></li><li class="level-4"><a href="#nodes-cluster-worker-latency-profiles-using_improve-cluster-stability-in-high-latency-environments">Use and change worker latency profiles</a></li><li class="level-4"><a href="#nodes-cluster-worker-latency-profiles-examining_improve-cluster-stability-in-high-latency-environments">Display resulting values of worker latency profile</a></li><li class="level-4"><a href="#post-worker-latency-profiles_improve-cluster-stability-in-high-latency-environments">Improving cluster stability in high latency environments using worker latency profiles</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="nodes-cluster-worker-latency-profiles-about_improve-cluster-stability-in-high-latency-environments">Understanding worker latency profiles</h3>
+<h3 id="how-etcd-works_how-etcd-works">How etcd works</h3>
 <div class="paragraph _abstract">
-<p>Review the following information to learn about worker latency profiles, which allow you to control the reaction of the cluster to latency issues without needing to determine the best values by using manual methods.</p>
+<p>The etcd Operator deploys and manages the etcd cluster for the Red&#160;Hat OpenShift Container Platform control plane by observing state, analyzing differences, and correcting drift.</p>
 </div>
 <div class="paragraph">
-<p>Worker latency profiles are four different categories of carefully-tuned parameters. The four parameters which implement these values are <code>node-status-update-frequency</code>, <code>node-monitor-grace-period</code>, <code>default-not-ready-toleration-seconds</code> and <code>default-unreachable-toleration-seconds</code>.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Setting these parameters manually is not supported. Incorrect parameter settings adversely affect cluster stability.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>To ensure a reliable approach to cluster configuration and management, etcd uses the etcd Operator. The Operator simplifies the use of etcd on a Kubernetes container platform such as Red&#160;Hat OpenShift Container Platform.</p>
 </div>
 <div class="paragraph">
-<p>All worker latency profiles configure the following parameters:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">node-status-update-frequency</dt>
-<dd>
-<p>Specifies how often the kubelet posts node status to the API server.</p>
-</dd>
-<dt class="hdlist1">node-monitor-grace-period</dt>
-<dd>
-<p>Specifies the amount of time in seconds that the Kubernetes Controller Manager waits for an update from a kubelet before marking the node unhealthy and adding the <code>node.kubernetes.io/not-ready</code> or <code>node.kubernetes.io/unreachable</code> taint to the node.</p>
-</dd>
-<dt class="hdlist1">default-not-ready-toleration-seconds</dt>
-<dd>
-<p>Specifies the amount of time in seconds after marking a node unhealthy that the Kube API Server Operator waits before evicting pods from that node.</p>
-</dd>
-<dt class="hdlist1">default-unreachable-toleration-seconds</dt>
-<dd>
-<p>Specifies the amount of time in seconds after marking a node unreachable that the Kube API Server Operator waits before evicting pods from that node.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>The following Operators monitor the changes to the worker latency profiles and respond accordingly:</p>
+<p>Additionally, you can use the etcd Operator to deploy and manage the etcd cluster for the Red&#160;Hat OpenShift Container Platform control plane. The etcd Operator manages the cluster state in the following ways:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The Machine Config Operator (MCO) updates the <code>node-status-update-frequency</code> parameter on the compute nodes.</p>
+<p>Observes the cluster state by using the Kubernetes API</p>
 </li>
 <li>
-<p>The Kubernetes Controller Manager updates the <code>node-monitor-grace-period</code> parameter on the control plane nodes.</p>
+<p>Analyzes differences between the current state and the required state</p>
 </li>
 <li>
-<p>The Kubernetes API Server Operator updates the <code>default-not-ready-toleration-seconds</code> and <code>default-unreachable-toleration-seconds</code> parameters on the control plane nodes.</p>
+<p>Corrects the differences through the etcd cluster management APIs, the Kubernetes API, or both</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Although the default configuration works in most cases, Red&#160;Hat OpenShift Container Platform offers two other worker latency profiles for situations where the network is experiencing higher latency than usual. The three worker latency profiles are described in the following sections:</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Default worker latency profile</dt>
-<dd>
-<p>With the <code>Default</code> profile, each <code>Kubelet</code> updates its status every 10 seconds (<code>node-status-update-frequency</code>). The <code>Kube Controller Manager</code> checks the statuses of <code>Kubelet</code> every 5 seconds.</p>
-<div class="paragraph">
-<p>The Kubernetes Controller Manager waits 40 seconds (<code>node-monitor-grace-period</code>) for a status update from <code>Kubelet</code> before considering the <code>Kubelet</code> unhealthy. If no status is made available to the Kubernetes Controller Manager, it then marks the node with the <code>node.kubernetes.io/not-ready</code> or <code>node.kubernetes.io/unreachable</code> taint and evicts the pods on that node.</p>
-</div>
-<div class="paragraph">
-<p>If a pod is on a node that has the <code>NoExecute</code> taint, the pod runs according to <code>tolerationSeconds</code>. If the node has no taint, it will be evicted in 300 seconds (<code>default-not-ready-toleration-seconds</code> and <code>default-unreachable-toleration-seconds</code> settings of the <code>Kube API Server</code>).</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 16.6668%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Profile</th>
-<th class="tableblock halign-left valign-top">Component</th>
-<th class="tableblock halign-left valign-top">Parameter</th>
-<th class="tableblock halign-left valign-top">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Default</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">kubelet</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>node-status-update-frequency</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">10s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kubelet Controller Manager</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>node-monitor-grace-period</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">40s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes API Server Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>default-not-ready-toleration-seconds</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">300s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes API Server Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>default-unreachable-toleration-seconds</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">300s</p></td>
-</tr>
-</tbody>
-</table>
-</dd>
-<dt class="hdlist1">Medium worker latency profile</dt>
-<dd>
-<p>Use the <code>MediumUpdateAverageReaction</code> profile if the network latency is slightly higher than usual.</p>
-<div class="paragraph">
-<p>The <code>MediumUpdateAverageReaction</code> profile reduces the frequency of kubelet updates to 20 seconds and changes the period that the Kubernetes Controller Manager waits for those updates to 2 minutes. The pod eviction period for a pod on that node is reduced to 60 seconds. If the pod has the <code>tolerationSeconds</code> parameter, the eviction waits for the period specified by that parameter.</p>
-</div>
-<div class="paragraph">
-<p>The Kubernetes Controller Manager waits for 2 minutes to consider a node unhealthy. In another minute, the eviction process starts.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 16.6668%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Profile</th>
-<th class="tableblock halign-left valign-top">Component</th>
-<th class="tableblock halign-left valign-top">Parameter</th>
-<th class="tableblock halign-left valign-top">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">MediumUpdateAverageReaction</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">kubelet</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>node-status-update-frequency</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kubelet Controller Manager</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>node-monitor-grace-period</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2m</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes API Server Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>default-not-ready-toleration-seconds</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">60s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes API Server Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>default-unreachable-toleration-seconds</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">60s</p></td>
-</tr>
-</tbody>
-</table>
-</dd>
-<dt class="hdlist1">Low worker latency profile</dt>
-<dd>
-<p>Use the <code>LowUpdateSlowReaction</code> profile if the network latency is extremely high.</p>
-<div class="paragraph">
-<p>The <code>LowUpdateSlowReaction</code> profile reduces the frequency of kubelet updates to 1 minute and changes the period that the Kubernetes Controller Manager waits for those updates to 5 minutes. The pod eviction period for a pod on that node is reduced to 60 seconds. If the pod has the <code>tolerationSeconds</code> parameter, the eviction waits for the period specified by that parameter.</p>
-</div>
-<div class="paragraph">
-<p>The Kubernetes Controller Manager waits for 5 minutes to consider a node unhealthy. In another minute, the eviction process starts.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 16.6668%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Profile</th>
-<th class="tableblock halign-left valign-top">Component</th>
-<th class="tableblock halign-left valign-top">Parameter</th>
-<th class="tableblock halign-left valign-top">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">LowUpdateSlowReaction</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">kubelet</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>node-status-update-frequency</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1m</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kubelet Controller Manager</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>node-monitor-grace-period</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5m</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes API Server Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>default-not-ready-toleration-seconds</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">60s</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes API Server Operator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>default-unreachable-toleration-seconds</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">60s</p></td>
-</tr>
-</tbody>
-</table>
-</dd>
-</dl>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2080,380 +1852,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The latency profiles do not support custom machine config pools, only the default worker machine config pools.</p>
+<p>etcd holds the cluster state, which is constantly updated. This state is continuously persisted, which leads to a high number of small changes at high frequency. As a result, it is critical to back up the etcd cluster member with fast, low-latency I/O. For more information about best practices for etcd, see "Recommended etcd practices".</p>
 </div>
 </td>
 </tr>
 </table>
-</div>
-<div class="sect3">
-<h4 id="nodes-cluster-worker-latency-profiles-using-at-creation_improve-cluster-stability-in-high-latency-environments">Implement worker latency profiles at cluster creation</h4>
-<div class="paragraph _abstract">
-<p>During cluster creation, you can implement worker latency profiles so that you can control the reaction of the cluster to latency issues without relying on manual methods to determine the best values.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>To edit the configuration of the installation program, first use the command <code>openshift-install create manifests</code> to create the default node manifest and other manifest YAML files. This file structure must exist before you can add <code>workerLatencyProfile</code>. The platform on which you are installing might have varying requirements. Refer to the Installing section of the documentation for your specific platform.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Create the manifest that is needed to build the cluster by using a folder name appropriate for your installation.</p>
-</li>
-<li>
-<p>Create a YAML file to define <code>config.node</code>. The file must be in the <code>manifests</code> directory.</p>
-</li>
-<li>
-<p>When defining <code>workerLatencyProfile</code> in the manifest for the first time, specify any of the profiles at cluster creation time: <code>Default</code>, <code>MediumUpdateAverageReaction</code> or <code>LowUpdateSlowReaction</code>.</p>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>View the manifest file by running the following command. The output of the command should show the creation of the <code>spec.workerLatencyProfile</code> <code>Default</code> value in the manifest file.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ openshift-install create manifests --dir=&lt;cluster_install_dir&gt;</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p><code>&lt;cluster_install_dir&gt;</code>: Specifies the directory where you installed your cluster.</p>
-</li>
-<li>
-<p>Edit the manifest and add the value by entering the following command. The following example command uses the <code>vi</code> editor to show an example manifest file with the "Default" <code>workerLatencyProfile</code> value added.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ vi &lt;cluster_install_dir&gt;/manifests/config-node-default-profile.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p><code>&lt;cluster_install_dir&gt;</code>: Specifies the directory where you installed your cluster.</p>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
-kind: Node
-metadata:
-name: cluster
-spec:
-workerLatencyProfile: "Default"
-# ...</code></pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nodes-cluster-worker-latency-profiles-using_improve-cluster-stability-in-high-latency-environments">Use and change worker latency profiles</h4>
-<div class="paragraph _abstract">
-<p>You can change a worker latency profile to deal with network latency at any time by editing the <code>node.config</code> object. With this configuration, you can ensure that your cluster runs properly if network latency between the control plane and the compute nodes fluctuates.</p>
-</div>
-<div class="paragraph">
-<p>You must move one worker latency profile at a time. For example, you cannot move directly from the <code>Default</code> profile to the <code>LowUpdateSlowReaction</code> worker latency profile. You must move from the <code>Default</code> worker latency profile to the <code>MediumUpdateAverageReaction</code> profile and then to the <code>LowUpdateSlowReaction</code> profile. Similarly, when returning to the <code>Default</code> profile, you must move from the low profile to the medium profile first, then to <code>Default</code>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>You can also configure worker latency profiles upon installing an Red&#160;Hat OpenShift Container Platform cluster.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Move to the medium worker latency profile:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Edit the <code>node.config</code> object:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit nodes.config/cluster</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Add <code>spec.workerLatencyProfile: MediumUpdateAverageReaction</code>:</p>
-<div class="listingblock">
-<div class="title">Example <code>node.config</code> object</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
-kind: Node
-metadata:
-  annotations:
-    include.release.openshift.io/ibm-cloud-managed: "true"
-    include.release.openshift.io/self-managed-high-availability: "true"
-    include.release.openshift.io/single-node-developer: "true"
-    release.openshift.io/create-only: "true"
-  creationTimestamp: "2022-07-08T16:02:51Z"
-  generation: 1
-  name: cluster
-  ownerReferences:
-  - apiVersion: config.openshift.io/v1
-    kind: ClusterVersion
-    name: version
-    uid: 36282574-bf9f-409e-a6cd-3032939293eb
-  resourceVersion: "1865"
-  uid: 0c0f7a4c-4307-4187-b591-6155695ac85b
-spec:
-  workerLatencyProfile: MediumUpdateAverageReaction
-# ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.workerLatencyProfile.MediumUpdateAverageReaction</code></dt>
-<dd>
-<p>Specifies that the medium worker latency policy should be used.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Scheduling on each compute node is disabled as the change is being applied.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Optional: Move to the low worker latency profile:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Edit the <code>node.config</code> object:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc edit nodes.config/cluster</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Change the <code>spec.workerLatencyProfile</code> value to <code>LowUpdateSlowReaction</code>:</p>
-<div class="listingblock">
-<div class="title">Example <code>node.config</code> object</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: config.openshift.io/v1
-kind: Node
-metadata:
-  annotations:
-    include.release.openshift.io/ibm-cloud-managed: "true"
-    include.release.openshift.io/self-managed-high-availability: "true"
-    include.release.openshift.io/single-node-developer: "true"
-    release.openshift.io/create-only: "true"
-  creationTimestamp: "2022-07-08T16:02:51Z"
-  generation: 1
-  name: cluster
-  ownerReferences:
-  - apiVersion: config.openshift.io/v1
-    kind: ClusterVersion
-    name: version
-    uid: 36282574-bf9f-409e-a6cd-3032939293eb
-  resourceVersion: "1865"
-  uid: 0c0f7a4c-4307-4187-b591-6155695ac85b
-spec:
-  workerLatencyProfile: LowUpdateSlowReaction
-# ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>spec.workerLatencyProfile.LowUpdateSlowReaction</code></dt>
-<dd>
-<p>Specifies that the low worker latency policy should be used.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Scheduling on each compute node is disabled as the change is being applied.</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="ulist">
-<div class="title">Verification</div>
-<ul>
-<li>
-<p>When all nodes return to the <code>Ready</code> condition, you can use the following command to look in the Kubernetes Controller Manager to ensure it was applied:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get KubeControllerManager -o yaml | grep -i workerlatency -A 5 -B 5</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># ...
-    - lastTransitionTime: "2022-07-11T19:47:10Z"
-      reason: ProfileUpdated
-      status: "False"
-      type: WorkerLatencyProfileProgressing
-    - lastTransitionTime: "2022-07-11T19:47:10Z"
-      message: all static pod revision(s) have updated latency profile
-      reason: ProfileUpdated
-      status: "True"
-      type: WorkerLatencyProfileComplete
-    - lastTransitionTime: "2022-07-11T19:20:11Z"
-      reason: AsExpected
-      status: "False"
-      type: WorkerLatencyProfileDegraded
-    - lastTransitionTime: "2022-07-11T19:20:36Z"
-      status: "False"
-# ...</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>where:</p>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>status.message: all static pod revision(s) have updated latency profile</code></dt>
-<dd>
-<p>Specifies that the profile is applied and active.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>To change the medium profile to default or change the default to medium, edit the <code>node.config</code> object and set the <code>spec.workerLatencyProfile</code> parameter to the appropriate value.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="nodes-cluster-worker-latency-profiles-examining_improve-cluster-stability-in-high-latency-environments">Display resulting values of worker latency profile</h4>
-<div class="paragraph _abstract">
-<p>You can run specific commands to display the values for the worker latency profile. You can then check the displayed values for information accuracy.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Procedure</div>
-<ol class="arabic">
-<li>
-<p>Check the <code>default-not-ready-toleration-seconds</code> and <code>default-unreachable-toleration-seconds</code> fields output by the Kube API Server:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get KubeAPIServer -o yaml | grep -A 1 default-</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">default-not-ready-toleration-seconds:
-- "300"
-default-unreachable-toleration-seconds:
-- "300"</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the values of the <code>node-monitor-grace-period</code> field from the Kube Controller Manager:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get KubeControllerManager -o yaml | grep -A 1 node-monitor</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">node-monitor-grace-period:
-- 40s</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the <code>nodeStatusUpdateFrequency</code> value from the Kubelet by entering the following command. Set the directory <code>/host</code> as the root directory within the debug shell. By changing the root directory to <code>/host</code>, you can run binaries contained in the executable paths of the host.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/&lt;compute_node_name&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ chroot /host</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal"># cat /etc/kubernetes/kubelet.conf|grep nodeStatusUpdateFrequency</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">“nodeStatusUpdateFrequency”: “10s”</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>These outputs validate the set of timing variables for the Worker Latency Profile.</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="post-worker-latency-profiles_improve-cluster-stability-in-high-latency-environments">Improving cluster stability in high latency environments using worker latency profiles</h4>
-<div class="paragraph _abstract">
-<p>Configure worker latency profiles to improve cluster stability in high latency environments.</p>
-</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="nodes-nodes-kernel-arguments_customize-kernel-behavior.html">Add kernel arguments to nodes</a> | ↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a> →</p>
-</div>
-</div>
-<div id="footnotes">
-<hr>
-<div class="footnote" id="_footnotedef_1">
-<a href="install-and-use-the-openshift-cli-oc-intro_install-and-use-the-openshift-cli-oc.html#_footnoteref_1">1</a>. Where <strong>N</strong> is a number greater than or equal to 1.
+<p>← Previous: <a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a> | ↑ Up: <a href="_discover.html">Discover</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="interactive-in-app-tutorial-con_interactive-in-app-tutorial.html">Building interactive tutorials</a> →</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 16:07:50 +0100
+Last updated 2026-10-23 10:28:08 +0100
 </div>
 </div>
 <style>

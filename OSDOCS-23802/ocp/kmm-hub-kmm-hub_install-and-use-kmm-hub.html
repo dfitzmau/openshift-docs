@@ -478,7 +478,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <!-- navmap-right-toc-end -->
 </head>
-<body id="nodes-nodes-kernel-arguments_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency" class="book toc2 toc-left navmap-has-right-toc">
+<body id="kmm-hub-kmm-hub_install-and-use-kmm-hub" class="book toc2 toc-left navmap-has-right-toc">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -524,6 +524,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a>
 </li>
+<li><a href="how-etcd-works_how-etcd-works.html">How etcd works</a>
+</li>
+<li><a href="interactive-in-app-tutorial-con_interactive-in-app-tutorial.html">Building interactive tutorials</a>
+</li>
 </ul>
 </li>
 <li><a href="_get_started.html">Get started</a>
@@ -538,6 +542,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
+</li>
+<li><a href="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial.html">Create your first quick start tutorial</a>
 </li>
 </ul>
 </li>
@@ -592,6 +598,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+</li>
+<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
 </li>
 </ul>
 </li>
@@ -947,7 +955,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
-
 <ul class="sectlevel2">
 <li><a href="configuring-alert-notifications-intro_configuring-alert-notifications.html">Configuring alert notifications</a>
 </li>
@@ -1027,7 +1034,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="kmm-day0-day2-installation_manage-kmm-day0-day2-lifecycle.html">Day 0 through Day 2 kmod installation</a>
+</li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
+</li>
+<li><a href="kmm-hub-kmm-hub_install-and-use-kmm-hub.html"><span class="toc-current">KMM-Hub</span></a>
+</li>
+<li><a href="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files.html">Defining full paths</a>
+</li>
+<li><a href="kmm-must-gather-tool_gather-diagnostic-data-for-kmm.html">Using the must-gather tool</a>
 </li>
 <li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
@@ -1160,6 +1175,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
 <li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
+</li>
+<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
+</li>
+<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
+</li>
+<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters.html">Create a KubeletConfig CR to edit kubelet parameters</a>
 </li>
 </ul>
 </li>
@@ -1406,6 +1427,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
 </li>
+<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1457,6 +1480,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_optimize.html">Optimize</a>
+
 <ul class="sectlevel2">
 <li><a href="about-node-tuning-operator_node-tuning-operator.html">Node Tuning Operator</a>
 </li>
@@ -1478,15 +1502,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-database-size_scale-etcd-database-size.html">Determine the size of the etcd database and understand its effects</a>
 </li>
-<li><a href="how-etcd-works_understand-etcd-performance-factors.html">How etcd works</a>
+<li><a href="understand-etcd-performance_understand-etcd-performance-factors.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
+<li><a href="make-changes-to-the-kubelet-settings-on-my-nodes-overview_make-changes-to-the-kubelet-settings-on-my-nodes.html">Allocate resources to nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
-</li>
-<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
 </li>
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
@@ -1508,8 +1530,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scalability-and-performance-recommended-practices_optimize-cluster-performance-across-subsystems.html">Recommended performance and scalability practices</a>
 </li>
-<li><a href="machine-config-pin-preload-images_reduce-image-pull-time.html">Pin images</a>
-</li>
 <li><a href="add-cri-o-storage-locations-for-faster-container-startup-con_add-cri-o-storage-locations-for-faster-container-startup.html">Add CRI-O storage locations for faster container startup</a>
 </li>
 <li><a href="nodes-pods-adjust-resources-in-place-about_adjust-pod-resource-levels-without-pod-disruption.html">About in-place pod resizing</a>
@@ -1520,27 +1540,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
-<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
-</li>
 <li><a href="nodes-cluster-overcommit-about_control-the-level-of-overcommitted-pods.html">Understanding overcommitment</a>
 </li>
 <li><a href="nodes-nodes-parallel-container-pulls-about_configure-parallel-configuration-image-pulls.html">About configuring parallel container image pulls</a>
 </li>
 <li><a href="nodes-nodes-kernel-arguments_customize-kernel-behavior.html">Add kernel arguments to nodes</a>
 </li>
-<li><a href="nodes-cluster-worker-latency-profiles-about_improve-cluster-stability-in-high-latency-environments.html">Understanding worker latency profiles</a>
-</li>
-<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
-</li>
 <li><a href="rodoo-about_run-once-duration-override-operator.html">About the Run Once Duration Override Operator</a>
 </li>
-<li><a href="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes.html">Configure node pools for hosted control planes</a>
+<li><a href="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes.html">Scale hosted clusters</a>
 </li>
-<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
-</li>
-<li><a href="nodes-nodes-kernel-arguments_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html"><span class="toc-current">Add kernel arguments to nodes</span></a>
-</li>
-<li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+<li><a href="cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">About Hyper-Threading for low latency and real-time applications</a>
 </li>
 <li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
@@ -1552,23 +1562,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
-</li>
-<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+<li><a href="reserve-capacity-for-planned-workloads-overview_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads on AWS and Azure</a>
 </li>
 <li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
 </li>
 <li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
 </li>
-<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
-</li>
 <li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
 </li>
-<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html">Keep data off the root volume for control plane machines</a>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-overview_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for machines on vSphere</a>
 </li>
 <li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
@@ -1587,7 +1589,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Create quick start tutorials in the web console</a>
+<li><a href="build-interactive-tutorials-con_build-interactive-tutorials.html">Building interactive tutorials</a>
+</li>
+<li><a href="create-quick-start-tutorials-con_create-quick-start-tutorials.html">Create quick-start tutorials</a>
 </li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
 </li>
@@ -1855,130 +1859,198 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency">About Hyper-Threading for low latency and real-time applications</a></li><li class="level-4"><a href="#disabling-hyperthreading-for-low-latency-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency">Disable Hyper-Threading for low latency applications</a></li></ul></aside>
+<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#kmm-hub-installing-kmm-hub_install-and-use-kmm-hub">Installing KMM-Hub</a></li><li class="level-5"><a href="#kmm-hub-installing-kmm-hub-olm_install-and-use-kmm-hub">Installing KMM-Hub using the Operator Lifecycle Manager</a></li><li class="level-5"><a href="#kmm-hub-installing-kmm-hub-creating-resources_install-and-use-kmm-hub">Installing KMM-Hub by creating KMM resources</a></li><li class="level-4"><a href="#kmm-hub-running-kmm-on-the-spoke_install-and-use-kmm-hub">Running KMM on the spoke</a></li><li class="level-4"><a href="#kmm-hub-using-the-managedclustermodule_install-and-use-kmm-hub">Using the ManagedClusterModule CRD</a></li><li class="level-4"><a href="#kmm-gathering-data-for-kmm-hub_install-and-use-kmm-hub">Gathering data for KMM-Hub</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="nodes-nodes-kernel-arguments_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency">Add kernel arguments to nodes</h3>
+<h3 id="kmm-hub-kmm-hub_install-and-use-kmm-hub">KMM-Hub</h3>
 <div class="paragraph _abstract">
-<p>In some special cases, you can add kernel arguments to a set of nodes in your cluster to customize the kernel behavior to meet specific needs you might have.</p>
+<p>KMM-Hub is a hub-cluster edition of Kernel Module Management for Red&#160;Hat OpenShift Container Platform multi-cluster deployments. It monitors spoke kernel versions, runs image builds and kmod signing on the hub, and delivers trimmed <code>Module</code> resources to spokes through RHACM.</p>
 </div>
-<div class="paragraph">
-<p>You should add kernel arguments with caution and a clear understanding of the implications of the arguments you set.</p>
-</div>
-<div class="admonitionblock warning">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<img src="data:image/png;base64," alt="Warning">
+<img src="data:image/png;base64," alt="Note">
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Improper use of kernel arguments can result in your systems becoming unbootable.</p>
+<p>KMM-Hub cannot be used to load kernel modules on the hub cluster. Install the regular edition of KMM to load kernel modules.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Examples of kernel arguments you could set include:</p>
+<div class="sect3">
+<h4 id="kmm-hub-installing-kmm-hub_install-and-use-kmm-hub">Installing KMM-Hub</h4>
+<div class="paragraph _abstract">
+<p>To deploy KMM-Hub for multi-cluster kernel module management on Red&#160;Hat OpenShift Container Platform, you can install it with Operator Lifecycle Manager (OLM) or by creating KMM resources manually.</p>
+</div>
+<div class="sect4">
+<h5 id="kmm-hub-installing-kmm-hub-olm_install-and-use-kmm-hub">Installing KMM-Hub using the Operator Lifecycle Manager</h5>
+<div class="paragraph _abstract">
+<p>To install KMM-Hub on Red&#160;Hat OpenShift Container Platform using Operator Lifecycle Manager, you can use the <strong>Operators</strong> section of the OpenShift web console.</p>
 </div>
 <div class="ulist">
-<ul>
-<li>
-<p><strong>nosmt</strong>: Disables symmetric multithreading (SMT) in the kernel. Multithreading allows multiple logical threads for each CPU. You could consider <code>nosmt</code> in multi-tenant environments to reduce risks from potential cross-thread attacks. By disabling SMT, you essentially choose security over performance.</p>
-</li>
-<li>
-<p><strong>enforcing=0</strong>: Configures Security Enhanced Linux (SELinux) to run in permissive mode. In permissive mode, the system acts as if SELinux is enforcing the loaded security policy, including labeling objects and emitting access denial entries in the logs, but it does not actually deny any operations. While not supported for production systems, permissive mode can be helpful for debugging.</p>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Warning">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Disabling SELinux on RHCOS in production is not supported. After SELinux has been disabled on a node, it must be re-provisioned before re-inclusion in a production cluster.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>See <a href="https://www.kernel.org/doc/Documentation/admin-guide/kernel-parameters.txt">Kernel.org kernel parameters</a> for a list and descriptions of kernel arguments.</p>
-</div>
-<div class="paragraph">
-<p>In the following procedure, you create a <code>MachineConfig</code> object that identifies:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A set of machines to which you want to add the kernel argument. In this case, machines with a worker role.</p>
-</li>
-<li>
-<p>Kernel arguments that are appended to the end of the existing kernel arguments.</p>
-</li>
-<li>
-<p>A label that indicates where in the list of machine configs the change is applied.</p>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<div class="title">Prerequisites</div>
-<ul>
-<li>
-<p>You have <code>cluster-admin</code> privileges.</p>
-</li>
-<li>
-<p>Your cluster is running.</p>
-</li>
-</ul>
-</div>
-<div class="olist arabic">
 <div class="title">Procedure</div>
-<ol class="arabic">
+<ul>
 <li>
-<p>List existing <code>MachineConfig</code> objects for your Red&#160;Hat OpenShift Container Platform cluster to determine how to
-label your machine config:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get MachineConfig</code></pre>
+<p>Use the <strong>Operators</strong> section of the OpenShift console to install KMM-Hub.</p>
+</li>
+</ul>
 </div>
 </div>
+<div class="sect4">
+<h5 id="kmm-hub-installing-kmm-hub-creating-resources_install-and-use-kmm-hub">Installing KMM-Hub by creating KMM resources</h5>
+<div class="paragraph _abstract">
+<p>To install KMM-Hub programmatically on Red&#160;Hat OpenShift Container Platform, you can create <code>Namespace</code>, <code>OperatorGroup</code>, and <code>Subscription</code> resources.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>If you want to install KMM-Hub programmatically, you can use the following resources to create
+the <code>Namespace</code>, <code>OperatorGroup</code> and <code>Subscription</code> resources:</p>
 <div class="listingblock">
-<div class="title">Example output</div>
 <div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                               GENERATEDBYCONTROLLER                      IGNITIONVERSION   AGE
-00-master                                          52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-00-worker                                          52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-01-master-container-runtime                        52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-01-master-kubelet                                  52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-01-worker-container-runtime                        52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-01-worker-kubelet                                  52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-99-master-generated-registries                     52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-99-master-ssh                                                                                 3.2.0             40m
-99-worker-generated-registries                     52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-99-worker-ssh                                                                                 3.2.0             40m
-rendered-master-23e785de7587df95a4b517e0647e5ab7   52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-rendered-worker-5d596d9293ca3ea80c896a1191735bb1   52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m</code></pre>
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: openshift-kmm-hub
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: kernel-module-management-hub
+  namespace: openshift-kmm-hub
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: kernel-module-management-hub
+  namespace: openshift-kmm-hub
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: kernel-module-management-hub
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace</code></pre>
 </div>
 </div>
 </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="kmm-hub-running-kmm-on-the-spoke_install-and-use-kmm-hub">Running KMM on the spoke</h4>
+<div class="paragraph _abstract">
+<p>To run Kernel Module Management (KMM) on spoke clusters in Red&#160;Hat OpenShift Container Platform, you can install it with a RHACM <code>Policy</code> object. After installation, create a <code>ManagedClusterModule</code> object from the hub to deploy kernel modules.</p>
+</div>
+<div class="paragraph">
+<p>You can install KMM on the spokes cluster through a RHACM <code>Policy</code> object. In addition to installing KMM from the software catalog and running it in a lightweight spoke mode, the <code>Policy</code> configures additional RBAC required for the RHACM agent to be able to manage <code>Module</code> resources.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
 <li>
-<p>Create a <code>MachineConfig</code> object file that identifies the kernel argument (for example, <code>05-worker-kernelarg-selinuxpermissive.yaml</code>)</p>
-<div class="listingblock">
+<p>Use the following RHACM policy to install KMM on spoke clusters:</p>
+<div class="listingblock yaml">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfig
+<pre class="highlight"><code>---
+apiVersion: policy.open-cluster-management.io/v1
+kind: Policy
 metadata:
-  labels:
-    machineconfiguration.openshift.io/role: worker
-  name: 05-worker-kernelarg-selinuxpermissive
+  name: install-kmm
 spec:
-  kernelArguments:
-    - enforcing=0</code></pre>
+  remediationAction: enforce
+  disabled: false
+  policy-templates:
+    - objectDefinition:
+        apiVersion: policy.open-cluster-management.io/v1
+        kind: ConfigurationPolicy
+        metadata:
+          name: install-kmm
+        spec:
+          severity: high
+          object-templates:
+          - complianceType: mustonlyhave
+            objectDefinition:
+              apiVersion: v1
+              kind: Namespace
+              metadata:
+                name: openshift-kmm
+          - complianceType: mustonlyhave
+            objectDefinition:
+              apiVersion: operators.coreos.com/v1
+              kind: OperatorGroup
+              metadata:
+                name: kmm
+                namespace: openshift-kmm
+              spec:
+                upgradeStrategy: Default
+          - complianceType: mustonlyhave
+            objectDefinition:
+              apiVersion: operators.coreos.com/v1alpha1
+              kind: Subscription
+              metadata:
+                name: kernel-module-management
+                namespace: openshift-kmm
+              spec:
+                channel: stable
+                config:
+                  env:
+                    - name: KMM_MANAGED
+                      value: "1"
+                installPlanApproval: Automatic
+                name: kernel-module-management
+                source: redhat-operators
+                sourceNamespace: openshift-marketplace
+          - complianceType: mustonlyhave
+            objectDefinition:
+              apiVersion: rbac.authorization.k8s.io/v1
+              kind: ClusterRole
+              metadata:
+                name: kmm-module-manager
+              rules:
+                - apiGroups: [kmm.sigs.x-k8s.io]
+                  resources: [modules]
+                  verbs: [create, delete, get, list, patch, update, watch]
+          - complianceType: mustonlyhave
+            objectDefinition:
+              apiVersion: rbac.authorization.k8s.io/v1
+              kind: ClusterRoleBinding
+              metadata:
+                name: klusterlet-kmm
+              subjects:
+              - kind: ServiceAccount
+                name: klusterlet-work-sa
+                namespace: open-cluster-management-agent
+              roleRef:
+                kind: ClusterRole
+                name: kmm-module-manager
+                apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: all-managed-clusters
+spec:
+  clusterSelector:
+    matchExpressions: []
+---
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+  name: install-kmm
+placementRef:
+  apiGroup: apps.open-cluster-management.io
+  kind: PlacementRule
+  name: all-managed-clusters
+subjects:
+  - apiGroup: policy.open-cluster-management.io
+    kind: Policy
+    name: install-kmm</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1986,198 +2058,172 @@ spec:
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>machineconfiguration.openshift.io/role</code></dt>
+<dt class="hdlist1"><code>spec.policy-templates.objectDefinition.spec.object-templates.objectDefinition.spec.config.env.name</code></dt>
 <dd>
-<p>Specifies a label to apply changes to specific nodes.</p>
+<p>Specifies the environment variable name on the <code>Subscription</code> object entry. This variable is required when running KMM on a spoke cluster.</p>
 </dd>
-<dt class="hdlist1"><code>name</code></dt>
+<dt class="hdlist1"><code>spec.clusterSelector</code></dt>
 <dd>
-<p>Specifies a name to identify where it fits among the machine configs (05) and what it does (adds a kernel argument to configure SELinux permissive mode).</p>
-</dd>
-<dt class="hdlist1"><code>kernelArguments</code></dt>
-<dd>
-<p>Specifies the exact kernel argument as <code>enforcing=0</code>.</p>
+<p>Specifies that on the <code>PlacementRule</code> object entry, this field can be customized to target select clusters only.</p>
 </dd>
 </dl>
-</div>
-</li>
-<li>
-<p>Create the new machine config:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f 05-worker-kernelarg-selinuxpermissive.yaml</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the machine configs to see that the new one was added:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get MachineConfig</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                                               GENERATEDBYCONTROLLER                      IGNITIONVERSION   AGE
-00-master                                          52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-00-worker                                          52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-01-master-container-runtime                        52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-01-master-kubelet                                  52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-01-worker-container-runtime                        52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-01-worker-kubelet                                  52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-05-worker-kernelarg-selinuxpermissive                                                         3.5.0             105s
-99-master-generated-registries                     52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-99-master-ssh                                                                                 3.2.0             40m
-99-worker-generated-registries                     52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-99-worker-ssh                                                                                 3.2.0             40m
-rendered-master-23e785de7587df95a4b517e0647e5ab7   52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m
-rendered-worker-5d596d9293ca3ea80c896a1191735bb1   52dd3ba6a9a527fc3ab42afac8d12b693534c8c9   3.5.0             33m</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Check the nodes:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get nodes</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                           STATUS                     ROLES    AGE   VERSION
-ip-10-0-136-161.ec2.internal   Ready                      worker   28m   v1.36.3
-ip-10-0-136-243.ec2.internal   Ready                      master   34m   v1.36.3
-ip-10-0-141-105.ec2.internal   Ready,SchedulingDisabled   worker   28m   v1.36.3
-ip-10-0-142-249.ec2.internal   Ready                      master   34m   v1.36.3
-ip-10-0-153-11.ec2.internal    Ready                      worker   28m   v1.36.3
-ip-10-0-153-150.ec2.internal   Ready                      master   34m   v1.36.3</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can see that scheduling on each worker node is disabled as the change is being applied.</p>
-</div>
-</li>
-<li>
-<p>Check that the kernel argument worked by going to one of the worker nodes and listing
-the kernel command-line arguments (in <code>/proc/cmdline</code> on the host):</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc debug node/ip-10-0-141-105.ec2.internal</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Example output</div>
-<div class="content">
-<pre class="highlight"><code class="language-terminal" data-lang="terminal">Starting pod/ip-10-0-141-105ec2internal-debug ...
-To use host binaries, run `chroot /host`
-
-sh-4.2# cat /host/proc/cmdline
-BOOT_IMAGE=/ostree/rhcos-... console=tty0 console=ttyS0,115200n8
-rootflags=defaults,prjquota rw root=UUID=fd0... ostree=/ostree/boot.0/rhcos/16...
-coreos.oem.id=qemu coreos.oem.id=ec2 ignition.platform.id=ec2 enforcing=0
-
-sh-4.2# exit</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You should see the <code>enforcing=0</code> argument added to the other kernel arguments.</p>
-</div>
-</li>
-</ol>
-</div>
-<div class="sect3">
-<h4 id="cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency">About Hyper-Threading for low latency and real-time applications</h4>
-<div class="paragraph _abstract">
-<p>You can use Hyper-Threading, an Intel processor technology, to allow a physical CPU processor core to function as two logical cores, executing two independent threads simultaneously.</p>
-</div>
-<div class="paragraph">
-<p>Hyper-Threading allows for better system throughput for certain workload types where parallel processing is beneficial. The default Red&#160;Hat OpenShift Container Platform configuration expects Hyper-Threading to be enabled.</p>
-</div>
-<div class="paragraph">
-<p>For telecommunications applications, design your application infrastructure to minimize latency as much as possible. Hyper-Threading can slow performance times and negatively affect throughput for compute-intensive workloads that require low latency. Disabling Hyper-Threading ensures predictable performance and can decrease processing times for these workloads.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Hyper-Threading implementation and configuration differs depending on the hardware you are running Red&#160;Hat OpenShift Container Platform on. Consult the relevant host hardware tuning information for more details of the Hyper-Threading implementation specific to that hardware. Disabling Hyper-Threading can increase the cost per core of the cluster.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="disabling-hyperthreading-for-low-latency-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency">Disable Hyper-Threading for low latency applications</h4>
-<div class="paragraph _abstract">
-<p>When configuring clusters for low latency processing, consider whether you want to disable Hyper-Threading before you deploy the cluster.</p>
-</div>
-<div class="paragraph">
-<p>To disable Hyper-Threading, perform the following steps:</p>
-</div>
-<div class="ulist">
-<div class="title">Procedure</div>
-<ul>
-<li>
-<p>Create a performance profile that is appropriate for your hardware and topology. The following example sets <code>nosmt</code> as an additional kernel argument:</p>
-<div class="listingblock">
-<div class="title">Example performance profile</div>
-<div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: performance.openshift.io/v2
-kind: PerformanceProfile
-metadata:
-  name: example-performanceprofile
-spec:
-  additionalKernelArgs:
-    - nmi_watchdog=0
-    - audit=0
-    - mce=off
-    - processor.max_cstate=1
-    - idle=poll
-    - intel_idle.max_cstate=0
-    - nosmt
-  cpu:
-    isolated: 2-3
-    reserved: 0-1
-  hugepages:
-    defaultHugepagesSize: 1G
-    pages:
-      - count: 2
-        node: 0
-        size: 1G
-  nodeSelector:
-    node-role.kubernetes.io/performance: ''
-  realTimeKernel:
-    enabled: true</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Note">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>When you configure reserved and isolated CPUs, the infra containers in pods use the reserved CPUs and the application containers use the isolated CPUs.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </li>
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="kmm-hub-using-the-managedclustermodule_install-and-use-kmm-hub">Using the <code>ManagedClusterModule</code> CRD</h4>
+<div class="paragraph _abstract">
+<p>To deploy kernel modules on spoke clusters with KMM-Hub on Red&#160;Hat OpenShift Container Platform, you can configure a cluster-scoped <code>ManagedClusterModule</code> custom resource that wraps a <code>Module</code> spec and selects target clusters.</p>
+</div>
+<div class="paragraph">
+<p>This CRD is cluster-scoped, wraps a <code>Module</code> spec and adds the following additional fields:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: hub.kmm.sigs.x-k8s.io/v1beta1
+kind: ManagedClusterModule
+metadata:
+  name: &lt;my-mcm&gt;
+  # No namespace, because this resource is cluster-scoped.
+spec:
+  moduleSpec:
+    selector:
+      node-wants-my-mcm: 'true'
+
+  spokeNamespace: &lt;some-namespace&gt;
+
+  selector:
+    wants-my-mcm: 'true'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>spec.moduleSpec</code></dt>
+<dd>
+<p>Specifies the <code>moduleLoader</code> and <code>devicePlugin</code> sections, similar to a <code>Module</code> resource.</p>
+</dd>
+<dt class="hdlist1"><code>spec.moduleSpec.selector</code></dt>
+<dd>
+<p>Specifies nodes within the <code>ManagedCluster</code>.</p>
+</dd>
+<dt class="hdlist1"><code>spec.spokeNamespace</code></dt>
+<dd>
+<p>Specifies in which namespace the <code>Module</code> should be created.</p>
+</dd>
+<dt class="hdlist1"><code>spec.selector</code></dt>
+<dd>
+<p>Specifies <code>ManagedCluster</code> objects.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>If build or signing instructions are present in <code>.spec.moduleSpec</code>, those pods are run on the hub cluster in the operator&#8217;s namespace.</p>
+</div>
+<div class="paragraph">
+<p>When the <code>.spec.selector matches</code> one or more <code>ManagedCluster</code> resources, then KMM-Hub creates a <code>ManifestWork</code> resource in the corresponding namespace(s). <code>ManifestWork</code> contains a trimmed-down <code>Module</code> resource, with kernel mappings preserved but all <code>build</code> and <code>sign</code> subsections are removed. <code>containerImage</code> fields that contain image names ending with a tag are replaced with their digest equivalent.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="kmm-gathering-data-for-kmm-hub_install-and-use-kmm-hub">Gathering data for KMM-Hub</h4>
+<div class="paragraph _abstract">
+<p>To collect diagnostic data for the KMM-Hub Operator on Red&#160;Hat OpenShift Container Platform, you can run the <code>must-gather</code> tool with the hub controller image and review Operator logs.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Gather the data for the KMM Operator hub controller manager:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Set the <code>MUST_GATHER_IMAGE</code> variable:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ export MUST_GATHER_IMAGE=$(oc get deployment -n openshift-kmm-hub kmm-operator-hub-controller -ojsonpath='{.spec.template.spec.containers[?(@.name=="manager")].env[?(@.name=="RELATED_IMAGE_MUST_GATHER")].value}')</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm must-gather --image="${MUST_GATHER_IMAGE}" -- /usr/bin/gather -u</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Use the <code>-n &lt;namespace&gt;</code> switch to specify a namespace if you installed KMM in a custom namespace.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Run the <code>must-gather</code> tool:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc adm must-gather --image="${MUST_GATHER_IMAGE}" -- /usr/bin/gather -u</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>View the Operator logs:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc logs -fn openshift-kmm-hub deployments/kmm-operator-hub-controller</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Example output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">I0417 11:34:08.807472       1 request.go:682] Waited for 1.023403273s due to client-side throttling, not priority and fairness, request: GET:https://172.30.0.1:443/apis/tuned.openshift.io/v1?timeout=32s
+I0417 11:34:12.373413       1 listener.go:44] kmm-hub/controller-runtime/metrics "msg"="Metrics server is starting to listen" "addr"="127.0.0.1:8080"
+I0417 11:34:12.376253       1 main.go:150] kmm-hub/setup "msg"="Adding controller" "name"="ManagedClusterModule"
+I0417 11:34:12.376621       1 main.go:186] kmm-hub/setup "msg"="starting manager"
+I0417 11:34:12.377690       1 leaderelection.go:248] attempting to acquire leader lease openshift-kmm-hub/kmm-hub.sigs.x-k8s.io...
+I0417 11:34:12.378078       1 internal.go:366] kmm-hub "msg"="Starting server" "addr"={"IP":"127.0.0.1","Port":8080,"Zone":""} "kind"="metrics" "path"="/metrics"
+I0417 11:34:12.378222       1 internal.go:366] kmm-hub "msg"="Starting server" "addr"={"IP":"::","Port":8081,"Zone":""} "kind"="health probe"
+I0417 11:34:12.395703       1 leaderelection.go:258] successfully acquired lease openshift-kmm-hub/kmm-hub.sigs.x-k8s.io
+I0417 11:34:12.396334       1 controller.go:185] kmm-hub "msg"="Starting EventSource" "controller"="ManagedClusterModule" "controllerGroup"="hub.kmm.sigs.x-k8s.io" "controllerKind"="ManagedClusterModule" "source"="kind source: *v1beta1.ManagedClusterModule"
+I0417 11:34:12.396403       1 controller.go:185] kmm-hub "msg"="Starting EventSource" "controller"="ManagedClusterModule" "controllerGroup"="hub.kmm.sigs.x-k8s.io" "controllerKind"="ManagedClusterModule" "source"="kind source: *v1.ManifestWork"
+I0417 11:34:12.396430       1 controller.go:185] kmm-hub "msg"="Starting EventSource" "controller"="ManagedClusterModule" "controllerGroup"="hub.kmm.sigs.x-k8s.io" "controllerKind"="ManagedClusterModule" "source"="kind source: *v1.Build"
+I0417 11:34:12.396469       1 controller.go:185] kmm-hub "msg"="Starting EventSource" "controller"="ManagedClusterModule" "controllerGroup"="hub.kmm.sigs.x-k8s.io" "controllerKind"="ManagedClusterModule" "source"="kind source: *v1.Job"
+I0417 11:34:12.396522       1 controller.go:185] kmm-hub "msg"="Starting EventSource" "controller"="ManagedClusterModule" "controllerGroup"="hub.kmm.sigs.x-k8s.io" "controllerKind"="ManagedClusterModule" "source"="kind source: *v1.ManagedCluster"
+I0417 11:34:12.396543       1 controller.go:193] kmm-hub "msg"="Starting Controller" "controller"="ManagedClusterModule" "controllerGroup"="hub.kmm.sigs.x-k8s.io" "controllerKind"="ManagedClusterModule"
+I0417 11:34:12.397175       1 controller.go:185] kmm-hub "msg"="Starting EventSource" "controller"="imagestream" "controllerGroup"="image.openshift.io" "controllerKind"="ImageStream" "source"="kind source: *v1.ImageStream"
+I0417 11:34:12.397221       1 controller.go:193] kmm-hub "msg"="Starting Controller" "controller"="imagestream" "controllerGroup"="image.openshift.io" "controllerKind"="ImageStream"
+I0417 11:34:12.498335       1 filter.go:196] kmm-hub "msg"="Listing all ManagedClusterModules" "managedcluster"="local-cluster"
+I0417 11:34:12.498570       1 filter.go:205] kmm-hub "msg"="Listed ManagedClusterModules" "count"=0 "managedcluster"="local-cluster"
+I0417 11:34:12.498629       1 filter.go:238] kmm-hub "msg"="Adding reconciliation requests" "count"=0 "managedcluster"="local-cluster"
+I0417 11:34:12.498687       1 filter.go:196] kmm-hub "msg"="Listing all ManagedClusterModules" "managedcluster"="sno1-0"
+I0417 11:34:12.498750       1 filter.go:205] kmm-hub "msg"="Listed ManagedClusterModules" "count"=0 "managedcluster"="sno1-0"
+I0417 11:34:12.498801       1 filter.go:238] kmm-hub "msg"="Adding reconciliation requests" "count"=0 "managedcluster"="sno1-0"
+I0417 11:34:12.501947       1 controller.go:227] kmm-hub "msg"="Starting workers" "controller"="imagestream" "controllerGroup"="image.openshift.io" "controllerKind"="ImageStream" "worker count"=1
+I0417 11:34:12.501948       1 controller.go:227] kmm-hub "msg"="Starting workers" "controller"="ManagedClusterModule" "controllerGroup"="hub.kmm.sigs.x-k8s.io" "controllerKind"="ManagedClusterModule" "worker count"=1
+I0417 11:34:12.502285       1 imagestream_reconciler.go:50] kmm-hub "msg"="registered imagestream info mapping" "ImageStream"={"name":"driver-toolkit","namespace":"openshift"} "controller"="imagestream" "controllerGroup"="image.openshift.io" "controllerKind"="ImageStream" "dtkImage"="quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:df42b4785a7a662b30da53bdb0d206120cf4d24b45674227b16051ba4b7c3934" "name"="driver-toolkit" "namespace"="openshift" "osImageVersion"="412.86.202302211547-0" "reconcileID"="e709ff0a-5664-4007-8270-49b5dff8bae9"</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a> | ↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a> →</p>
+<p>← Previous: <a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files.html">Defining full paths</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2188,7 +2234,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 16:07:50 +0100
+Last updated 2026-10-23 10:28:08 +0100
 </div>
 </div>
 <style>

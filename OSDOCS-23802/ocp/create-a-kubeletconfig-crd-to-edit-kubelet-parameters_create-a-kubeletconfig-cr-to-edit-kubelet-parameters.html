@@ -437,48 +437,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
-<!-- navmap-right-toc-start -->
-<style>
-  body.navmap-has-right-toc { padding-right: 18em; }
-  #navmap-right-toc {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 16em;
-    height: 100%;
-    overflow: auto;
-    padding: 1.25em 1em;
-    background: #f8f8f7;
-    border-left: 1px solid #e7e7e9;
-    z-index: 1000;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-size: .9em;
-  }
-  #navmap-right-toc h2 { margin-top: 0; font-size: 1.1em; }
-  #navmap-right-toc ul { list-style: none; margin: 0; padding: 0; }
-  #navmap-right-toc li { line-height: 1.35; margin: .4em 0; }
-  #navmap-right-toc li.level-3 { padding-left: 1em; }
-  #navmap-right-toc li.level-4 { padding-left: 2em; }
-  #navmap-right-toc li.level-5,
-  #navmap-right-toc li.level-6 { padding-left: 3em; }
-  #navmap-right-toc a { text-decoration: none; }
-  @media screen and (max-width: 1023px) {
-    body.navmap-has-right-toc { padding-right: 0; }
-    #navmap-right-toc {
-      position: static;
-      width: auto;
-      height: auto;
-      margin: 1em;
-      border: 1px solid #e7e7e9;
-      border-radius: 4px;
-    }
-  }
-
-
-</style>
-<!-- navmap-right-toc-end -->
 </head>
-<body id="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines" class="book toc2 toc-left navmap-has-right-toc">
+<body id="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters" class="book toc2 toc-left">
 <div id="header">
 <h1>Red Hat OpenShift Container Platform</h1>
 <div id="toc" class="toc2">
@@ -524,6 +484,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="review-cluster-operators-con_review-cluster-operators.html">Review cluster Operators</a>
 </li>
+<li><a href="how-etcd-works_how-etcd-works.html">How etcd works</a>
+</li>
+<li><a href="interactive-in-app-tutorial-con_interactive-in-app-tutorial.html">Building interactive tutorials</a>
+</li>
 </ul>
 </li>
 <li><a href="_get_started.html">Get started</a>
@@ -538,6 +502,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-default-pod-behavior-con_configure-default-pod-behavior.html">Configure default pod behavior</a>
 </li>
 <li><a href="configure-my-nodes-by-using-machine-config-objects-con_configure-my-nodes-by-using-machine-config-objects.html">Configure my nodes by using machine config objects</a>
+</li>
+<li><a href="create-first-quick-start-tutorial-con_create-first-quick-start-tutorial.html">Create your first quick start tutorial</a>
 </li>
 </ul>
 </li>
@@ -592,6 +558,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="distribute-hosted-cluster-workloads-con_distribute-hosted-cluster-workloads.html">Distribute hosted cluster workloads</a>
 </li>
 <li><a href="automate-edge-cluster-deployment-with-gitops-ztp-intro_automate-edge-cluster-deployment-with-gitops-ztp.html">Use GitOps ZTP to provision clusters at the network far edge</a>
+</li>
+<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
 </li>
 </ul>
 </li>
@@ -947,7 +915,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_configure.html">Configure</a>
-
 <ul class="sectlevel2">
 <li><a href="configuring-alert-notifications-intro_configuring-alert-notifications.html">Configuring alert notifications</a>
 </li>
@@ -1027,7 +994,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="about-kmm_manage-kernel-modules-across-cluster-nodes.html">About the Kernel Module Management Operator</a>
 </li>
+<li><a href="kmm-day0-day2-installation_manage-kmm-day0-day2-lifecycle.html">Day 0 through Day 2 kmod installation</a>
+</li>
 <li><a href="manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config-con_manage-kernel-modules-across-cluster-nodes-load-kernel-modules-at-day-1-with-machine-config.html">Load kernel modules at Day 1 with Machine Config</a>
+</li>
+<li><a href="kmm-hub-kmm-hub_install-and-use-kmm-hub.html">KMM-Hub</a>
+</li>
+<li><a href="kmm-defining-full-paths_use-wildcard-and-glob-patterns-to-sign-kernel-module-files.html">Defining full paths</a>
+</li>
+<li><a href="kmm-must-gather-tool_gather-diagnostic-data-for-kmm.html">Using the must-gather tool</a>
 </li>
 <li><a href="installation-oc-mirror-v2-about_mirror-container-images-to-a-local-registry.html">oc-mirror plugin v2</a>
 </li>
@@ -1160,6 +1135,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="configure-nvidia-gpu-accelerators-intro_configure-nvidia-gpu-accelerators.html">Configure NVIDIA GPU accelerators</a>
 </li>
 <li><a href="configure-rdma-for-gpu-workloads-intro_configure-rdma-for-gpu-workloads.html">Configure RDMA for GPU workloads</a>
+</li>
+<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
+</li>
+<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
+</li>
+<li><a href="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters.html"><span class="toc-current">Create a KubeletConfig CR to edit kubelet parameters</span></a>
 </li>
 </ul>
 </li>
@@ -1406,6 +1387,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="understand-telco-cluster-security-intro_understand-telco-cluster-security.html">Understand telco cluster security</a>
 </li>
+<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
+</li>
 </ul>
 </li>
 <li><a href="_observe.html">Observe</a>
@@ -1457,6 +1440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="_optimize.html">Optimize</a>
+
 <ul class="sectlevel2">
 <li><a href="about-node-tuning-operator_node-tuning-operator.html">Node Tuning Operator</a>
 </li>
@@ -1478,15 +1462,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-database-size_scale-etcd-database-size.html">Determine the size of the etcd database and understand its effects</a>
 </li>
-<li><a href="how-etcd-works_understand-etcd-performance-factors.html">How etcd works</a>
+<li><a href="understand-etcd-performance_understand-etcd-performance-factors.html">Factors that affect etcd performance</a>
 </li>
 <li><a href="infrastructure-components_create-infrastructure-nodes.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
 </li>
-<li><a href="nodes-nodes-managing-about_make-changes-to-the-kubelet-settings-on-my-nodes.html">Modifying nodes</a>
+<li><a href="make-changes-to-the-kubelet-settings-on-my-nodes-overview_make-changes-to-the-kubelet-settings-on-my-nodes.html">Allocate resources to nodes</a>
 </li>
 <li><a href="nodes-nodes-working-evacuating_evacuate-pods-on-a-node.html">Evacuate pods on nodes</a>
-</li>
-<li><a href="about-machine-config-operator_configure-node-changes-on-a-cluster.html">About the Machine Config Operator</a>
 </li>
 <li><a href="nodes-cluster-limit-ranges-about_restrict-resource-consumption-with-limit-ranges.html">About limit ranges</a>
 </li>
@@ -1508,8 +1490,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="scalability-and-performance-recommended-practices_optimize-cluster-performance-across-subsystems.html">Recommended performance and scalability practices</a>
 </li>
-<li><a href="machine-config-pin-preload-images_reduce-image-pull-time.html">Pin images</a>
-</li>
 <li><a href="add-cri-o-storage-locations-for-faster-container-startup-con_add-cri-o-storage-locations-for-faster-container-startup.html">Add CRI-O storage locations for faster container startup</a>
 </li>
 <li><a href="nodes-pods-adjust-resources-in-place-about_adjust-pod-resource-levels-without-pod-disruption.html">About in-place pod resizing</a>
@@ -1520,27 +1500,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="etcd-tuning-parameters_optimize-etcd-performance.html">Set tuning parameters for etcd</a>
 </li>
-<li><a href="nodes-containers-projected-volumes-about_map-configuration-sources-with-projected-volumes.html">Understanding projected volumes</a>
-</li>
 <li><a href="nodes-cluster-overcommit-about_control-the-level-of-overcommitted-pods.html">Understanding overcommitment</a>
 </li>
 <li><a href="nodes-nodes-parallel-container-pulls-about_configure-parallel-configuration-image-pulls.html">About configuring parallel container image pulls</a>
 </li>
 <li><a href="nodes-nodes-kernel-arguments_customize-kernel-behavior.html">Add kernel arguments to nodes</a>
 </li>
-<li><a href="nodes-cluster-worker-latency-profiles-about_improve-cluster-stability-in-high-latency-environments.html">Understanding worker latency profiles</a>
-</li>
-<li><a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a>
-</li>
 <li><a href="rodoo-about_run-once-duration-override-operator.html">About the Run Once Duration Override Operator</a>
 </li>
-<li><a href="configuring-node-pools-for-hcp_machine-configuration-for-hosted-control-planes.html">Configure node pools for hosted control planes</a>
+<li><a href="machine-configuration-for-hosted-control-planes-overview_machine-configuration-for-hosted-control-planes.html">Scale hosted clusters</a>
 </li>
-<li><a href="images-imagestream-use_manage-image-streams-and-imports.html">Use image streams</a>
-</li>
-<li><a href="nodes-nodes-kernel-arguments_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">Add kernel arguments to nodes</a>
-</li>
-<li><a href="infrastructure-components_separate-infrastructure-machines-from-machines-that-run-workloads.html">Red&#160;Hat OpenShift Container Platform infrastructure components</a>
+<li><a href="cnf-about-hyper-threading-for-low-latency-and-real-time-applications_enable-symmetric-multithreading-on-my-nodes-to-improve-efficiency.html">About Hyper-Threading for low latency and real-time applications</a>
 </li>
 <li><a href="scale-compute-capacity-con_scale-compute-capacity.html">Scale compute capacity</a>
 </li>
@@ -1552,23 +1522,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="use-interruptible-capacity-for-lower-cost-machines-con_use-interruptible-capacity-for-lower-cost-machines.html">Use interruptible capacity for lower-cost machines</a>
 </li>
-<li><a href="reserve-capacity-for-planned-workloads-con_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads</a>
-</li>
-<li><a href="reserve-capacity-for-planned-control-plane-workloads-con_reserve-capacity-for-planned-control-plane-workloads.html">Reserve capacity for planned control plane workloads</a>
+<li><a href="reserve-capacity-for-planned-workloads-overview_reserve-capacity-for-planned-workloads.html">Reserve capacity for planned workloads on AWS and Azure</a>
 </li>
 <li><a href="accelerate-workloads-with-gpus-con_accelerate-workloads-with-gpus.html">Accelerate workloads with GPUs</a>
 </li>
 <li><a href="improve-network-performance-for-compute-machines-con_improve-network-performance-for-compute-machines.html">Improve network performance for compute machines</a>
 </li>
-<li><a href="improve-network-performance-for-control-plane-machines-con_improve-network-performance-for-control-plane-machines.html">Improve network performance for control plane machines</a>
-</li>
 <li><a href="improve-storage-performance-for-compute-machines-con_improve-storage-performance-for-compute-machines.html">Improve storage performance for compute machines</a>
 </li>
-<li><a href="improve-storage-performance-for-control-plane-machines-con_improve-storage-performance-for-control-plane-machines.html">Improve storage performance for control plane machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a>
-</li>
-<li><a href="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines.html"><span class="toc-current">Keep data off the root volume for control plane machines</span></a>
+<li><a href="keep-data-off-the-root-volume-for-compute-machines-overview_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for machines on vSphere</a>
 </li>
 <li><a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a>
 </li>
@@ -1587,7 +1549,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="select-cluster-capabilities-con_select-cluster-capabilities.html">Select cluster capabilities</a>
 </li>
-<li><a href="understanding-quick-starts_create-quick-start-tutorials.html">Create quick start tutorials in the web console</a>
+<li><a href="build-interactive-tutorials-con_build-interactive-tutorials.html">Building interactive tutorials</a>
+</li>
+<li><a href="create-quick-start-tutorials-con_create-quick-start-tutorials.html">Create quick-start tutorials</a>
 </li>
 <li><a href="customize-the-web-console-con_customize-the-web-console.html">Customize the web console</a>
 </li>
@@ -1855,41 +1819,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<aside id="navmap-right-toc" aria-label="On this page"><h2>On this page</h2><ul><li class="level-4"><a href="#machineset-vsphere-data-disks_keep-data-off-the-root-volume-for-control-plane-machines">Configuring data disks by using machine sets</a></li></ul></aside>
 <div id="content">
 <div class="sect2">
-<h3 id="keep-data-off-the-root-volume-for-control-plane-machines-con_keep-data-off-the-root-volume-for-control-plane-machines">Keep data off the root volume for control plane machines</h3>
+<h3 id="create-a-kubeletconfig-crd-to-edit-kubelet-parameters_create-a-kubeletconfig-cr-to-edit-kubelet-parameters">Create a KubeletConfig CR to edit kubelet parameters</h3>
 <div class="paragraph _abstract">
-<p>A data disk is storage that a machine gets in addition to its root volume. Putting etcd data on its own disk keeps the root volume from filling up, so operations such as upgrades keep the space they need.</p>
-</div>
-<div class="sect3">
-<h4 id="machineset-vsphere-data-disks_keep-data-off-the-root-volume-for-control-plane-machines">Configuring data disks by using machine sets</h4>
-<div class="paragraph _abstract">
-<p>To provide persistent storage beyond the root volume for specialized application workloads, define a <code>dataDisks</code> array in the <code>MachineSet</code> YAML file to specify disk size and storage policy.</p>
-</div>
-<div class="paragraph">
-<p>Red&#160;Hat OpenShift Container Platform clusters on VMware vSphere support adding up to 29 disks to the virtual machine (VM) controller.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="data:image/png;base64," alt="Important">
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Configuring vSphere data disks is a Technology Preview feature only. Technology Preview features are not supported with Red&#160;Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process.</p>
-</div>
-<div class="paragraph">
-<p>For more information about the support scope of Red Hat Technology Preview features, see <a href="https://access.redhat.com/support/offerings/techpreview/">Technology Preview Features Support Scope</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>By configuring data disks, you can attach disks to VMs and use them to store data for etcd, container images, and other uses.
-Separating data can help avoid filling the primary disk so that important activities such as upgrades have the resources that they require.</p>
+<p>You can use a <code>KubeletConfig</code> custom resource (CR) to edit a kubelet parameters without modifing the kubelet configuration directly.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1899,100 +1833,453 @@ Separating data can help avoid filling the primary disk so that important activi
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Adding data disks attaches them to the VM and mounts them to the location that RHCOS designates.</p>
+<p>As the fields in the <code>kubeletConfig</code> object are passed directly to the kubelet from upstream Kubernetes, the kubelet validates those values directly. Invalid values in the <code>kubeletConfig</code> object might cause cluster nodes to become unavailable. For valid values, see the <a href="https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/">Kubernetes documentation</a>.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>You can set most kubelet configuration options. You cannot overwrite the following options:</p>
+</div>
 <div class="ulist">
-<div class="title">Prerequisites</div>
 <ul>
 <li>
-<p>You have administrator access to OpenShift CLI (<code>oc</code>) for an Red&#160;Hat OpenShift Container Platform cluster on vSphere.</p>
+<p><code>CgroupDriver</code></p>
+</li>
+<li>
+<p><code>ClusterDNS</code></p>
+</li>
+<li>
+<p><code>ClusterDomain</code></p>
+</li>
+<li>
+<p><code>StaticPodPath</code></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Consider the following guidance:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit an existing <code>KubeletConfig</code> CR to modify existing settings or add new settings, instead of creating a CR for each change. It is recommended that you create a CR only to modify a different machine config pool, or for changes that are intended to be temporary, so that you can revert the changes.</p>
+</li>
+<li>
+<p>Create one <code>KubeletConfig</code> CR for each machine config pool with all the config changes you want for that pool.</p>
+</li>
+<li>
+<p>As needed, create multiple <code>KubeletConfig</code> CRs with a limit of 10 per cluster. For the first <code>KubeletConfig</code> CR, the Machine Config Operator (MCO) creates a machine config appended with <code>kubelet</code>. With each subsequent CR, the controller creates another <code>kubelet</code> machine config with a numeric suffix. For example, if you have a <code>kubelet</code> machine config with a <code>-2</code> suffix, the next <code>kubelet</code> machine config is appended with <code>-3</code>.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The Machine Config Operator does not merge multiple <code>KubeletConfig</code> CRs that target the same machine config pool. Each CR generates a separate machine config that writes the kubelet configuration. The most recently created <code>KubeletConfig</code> CR takes precedence and overrides the kubelet settings from earlier CRs for that pool.</p>
+</div>
+<div class="paragraph">
+<p>To apply multiple kubelet settings to the same pool, include all of the settings in a single <code>KubeletConfig</code> CR.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are applying a kubelet or container runtime config to a custom machine config pool, the custom role in the <code>machineConfigSelector</code> must match the name of the custom machine config pool.</p>
+</div>
+<div class="paragraph">
+<p>For example, because the following custom machine config pool is named <code>infra</code>, the custom role must also be <code>infra</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigPool
+metadata:
+  name: infra
+spec:
+  machineConfigSelector:
+    matchExpressions:
+      - {key: machineconfiguration.openshift.io/role, operator: In, values: [worker,infra]}
+# ...</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you want to delete the machine configs, delete them in reverse order to avoid exceeding the limit. For example, you delete the <code>kubelet-3</code> machine config before deleting the <code>kubelet-2</code> machine config.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have a machine config with a <code>kubelet-9</code> suffix, and you create another <code>KubeletConfig</code> CR, a new machine config is not created, even if there are fewer than 10 <code>kubelet</code> machine configs.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following example command and output show a <code>KubeletConfig</code> CR:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeletconfig</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                      AGE
+set-kubelet-config        15m</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example command and output show a <code>KubeletConfig</code> machine config:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get mc | grep kubelet</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">...
+99-worker-generated-kubelet-1                  b5c5119de007945b6fe6fb215db3b8e2ceb12511   3.5.0             26m
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following procedure is an example to show how to configure the maximum number of pods per node, the maximum PIDs per node, and the maximum container log size size on the worker nodes.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Prerequisites</div>
+<ol class="arabic">
+<li>
+<p>Obtain the label associated with the static <code>MachineConfigPool</code> CR for the type of node you want to configure.
+Perform one of the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>View the machine config pool:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe machineconfigpool &lt;name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe machineconfigpool worker</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfigPool
+metadata:
+  creationTimestamp: 2019-02-08T14:52:39Z
+  generation: 1
+  labels:
+    custom-kubelet: set-kubelet-config</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>metadata.labels</code> parameter specifies labels you can use with a <code>KubeletConfig</code> CR.</p>
+</div>
+</li>
+<li>
+<p>If the label is not present, add a key/value pair:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc label machineconfigpool worker custom-kubelet=set-kubelet-config</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>In a text editor, open the YAML file for an existing machine set or create a new one.</p>
-</li>
-<li>
-<p>Edit the following lines under the <code>providerSpec</code> field:</p>
-<div class="openblock">
-<div class="content">
+<p>View the available machine configuration objects that you can select:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machine.openshift.io/v1
-kind: ControlPlaneMachineSet
-# ...
-spec:
-  template:
-    machines_v1beta1_machine_openshift_io:
-      spec:
-        providerSpec:
-          value:
-            dataDisks:
-            - name: "&lt;disk_name&gt;"
-              provisioningMode: "&lt;mode&gt;"
-              sizeGiB: 20
-            - name: "&lt;disk_name&gt;"
-              provisioningMode: "&lt;mode&gt;"
-              sizeGiB: 20
-# ...</code></pre>
-</div>
-</div>
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get machineconfig</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>where</p>
+<p>By default, the two kubelet-related configs are <code>01-master-kubelet</code> and <code>01-worker-kubelet</code>.</p>
 </div>
-<div class="openblock">
+</li>
+<li>
+<p>Check the current value for the maximum pods per node:</p>
+<div class="listingblock">
 <div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe node &lt;node_name&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe node ci-ln-5grqprb-f76d1-ncnqq-worker-a-mdv94</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Look for <code>value: pods: &lt;value&gt;</code> in the <code>Allocatable</code> stanza:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">Allocatable:
+ attachable-volumes-aws-ebs:  25
+ cpu:                         3500m
+ hugepages-1Gi:               0
+ hugepages-2Mi:               0
+ memory:                      15341844Ki
+ pods:                        250</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Configure the worker nodes as needed:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a YAML file similar to the following that contains the kubelet configuration:</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Kubelet configurations that target a specific machine config pool also affect any dependent pools. For example, creating a kubelet configuration for the pool containing worker nodes will also apply to any subset pools, including the pool containing infrastructure nodes. To avoid this, you must create a new machine config pool with a selection expression that only includes worker nodes, and have your kubelet configuration target this new pool.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: KubeletConfig
+metadata:
+  name: set-kubelet-config
+spec:
+  machineConfigPoolSelector:
+    matchLabels:
+      custom-kubelet: set-kubelet-config
+  kubeletConfig:
+      podPidsLimit: 8192
+      containerLogMaxSize: 50Mi
+      maxPods: 500</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.spec.providerSpec.value.dataDisks</code></dt>
+<dt class="hdlist1"><code>spec.machineConfigPoolSelector.matchLabels</code></dt>
 <dd>
-<p>Specifies a collection of 1-29 data disk definitions. This sample configuration shows the formatting to include two data disk definitions.</p>
+<p>Specifies the label from the machine config pool.</p>
 </dd>
-<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.spec.providerSpec.value.dataDisks.name</code></dt>
+<dt class="hdlist1"><code>spec.kubeletConfig</code></dt>
 <dd>
-<p>Specifies the name of the data disk. The name must meet the following requirements:</p>
+<p>Specifies the kubelet configuration. For example:</p>
+<div class="openblock">
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Start and end with an alphanumeric character</p>
+<p>Use <code>podPidsLimit</code> to set the maximum number of PIDs in any pod.</p>
 </li>
 <li>
-<p>Consist only of alphanumeric characters, hyphens (<code>-</code>), and underscores (<code>_</code>)</p>
+<p>Use <code>containerLogMaxSize</code> to set the maximum size of the container log file before it is rotated.</p>
 </li>
 <li>
-<p>Have a maximum length of 80 characters</p>
+<p>Use <code>maxPods</code> to set the maximum pods per node.</p>
+</li>
+<li>
+<p>Use <code>nodeStatusMaxImages</code> to set how many images the node reports. If a node contains more than 50 images, pod scheduling might be imbalanced because the image list is shortened to 50 by default. Set <code>nodeStatusMaxImages</code> to <code>-1</code> to disable that limit.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The rate at which the kubelet talks to the API server depends on queries per second (QPS) and burst values. The default values, <code>50</code> for <code>kubeAPIQPS</code> and <code>100</code> for <code>kubeAPIBurst</code>, are sufficient if there are limited pods running on each node. It is recommended to update the kubelet QPS and burst rates if there are enough CPU and memory resources on the node.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">apiVersion: machineconfiguration.openshift.io/v1
+kind: KubeletConfig
+metadata:
+  name: set-kubelet-config
+spec:
+  machineConfigPoolSelector:
+    matchLabels:
+      custom-kubelet: set-kubelet-config
+  kubeletConfig:
+    maxPods: &lt;pod_count&gt;
+    kubeAPIBurst: &lt;burst_rate&gt;
+    kubeAPIQPS: &lt;QPS&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </li>
 </ul>
 </div>
-</dd>
-<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.spec.providerSpec.value.dataDisks.provisioningMode</code></dt>
-<dd>
-<p>Specifies the data disk provisioning method. This value defaults to the vSphere default storage policy if not set. Valid values are <code>Thin</code>, <code>Thick</code>, and <code>EagerlyZeroed</code>.</p>
-</dd>
-<dt class="hdlist1"><code>spec.template.machines_v1beta1_machine_openshift_io.spec.providerSpec.value.dataDisks.sizeGiB</code></dt>
-<dd>
-<p>Specifies the size of the data disk in GiB. The maximum size is 16,384 GiB.</p>
+</div>
+</div>
 </dd>
 </dl>
 </div>
+</li>
+<li>
+<p>Update the machine config pool for workers with the label:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc label machineconfigpool worker custom-kubelet=set-kubelet-config</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the <code>KubeletConfig</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc create -f change-maxPods-cr.yaml</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Verify that the <code>KubeletConfig</code> object is created:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeletconfig</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">NAME                      AGE
+set-kubelet-config        15m</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Depending on the number of worker nodes in the cluster, wait for the worker nodes to be rebooted one by one. For a cluster with 3 worker nodes, this could take about 10 to 15 minutes.</p>
+</div>
+</li>
+<li>
+<p>Verify that the changes are applied to the node:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Check on a worker node that the <code>maxPods</code> value changed:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc describe node &lt;node_name&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Locate the <code>Allocatable</code> stanza:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal"> ...
+Allocatable:
+  attachable-volumes-gce-pd:  127
+  cpu:                        3500m
+  ephemeral-storage:          123201474766
+  hugepages-1Gi:              0
+  hugepages-2Mi:              0
+  memory:                     14225400Ki
+  pods:                       500
+ ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, the <code>pods</code> parameter should report the value you set in the <code>KubeletConfig</code> object.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Verify the change in the <code>KubeletConfig</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get kubeletconfigs set-kubelet-config -o yaml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This should show a status of <code>True</code> and <code>type:Success</code>, as shown in the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">spec:
+  kubeletConfig:
+    containerLogMaxSize: 50Mi
+    maxPods: 500
+    podPidsLimit: 8192
+  machineConfigPoolSelector:
+    matchLabels:
+      custom-kubelet: set-kubelet-config
+status:
+  conditions:
+  - lastTransitionTime: "2021-06-30T17:04:07Z"
+    message: Success
+    status: "True"
+    type: Success</code></pre>
 </div>
 </div>
 </li>
 </ol>
 </div>
 </div>
-</div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="keep-data-off-the-root-volume-for-compute-machines-con_keep-data-off-the-root-volume-for-compute-machines.html">Keep data off the root volume for compute machines</a> | ↑ Up: <a href="_optimize.html">Optimize</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="kueue-ai-ml-workloads-intro_run-ai-and-ml-workloads-with-red-hat-build-of-kueue.html">Run AI and ML workloads with Red&#160;Hat build of Kueue</a> →</p>
+<p>← Previous: <a href="nodes-containers-dev-fuse-configuring_enable-faster-container-builds.html">Configure /dev/fuse for unprivileged builds in pods</a> | ↑ Up: <a href="_configure.html">Configure</a> | ⌂ Home: <a href="navigation.html">Red Hat OpenShift Container Platform</a> | Next: <a href="_networking.html">Networking</a> →</p>
 </div>
 </div>
 <div id="footnotes">
@@ -2003,7 +2290,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-10-22 16:07:50 +0100
+Last updated 2026-10-23 10:28:08 +0100
 </div>
 </div>
 <style>
