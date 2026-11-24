@@ -1,5 +1,124 @@
-= gh-pages branch
+# Render and publish an .adoc HTML preview without the preview bot
 
-This empty branch exists so that writers can easily set up builds using GitHub Pages.
+Use this when the GitHub preview bot is unavailable and an engineer needs to
+see rendered .adoc files from a PR. The workflow renders an assembly to a
+single self-contained HTML file (CSS and images embedded) and publishes it to
+GitHub Pages on your fork. No pull request is involved at any point.
 
-Do not delete this branch or add additional content to it.
+## One-time setup (per person)
+
+### 1. Install the tools
+
+```bash
+sudo dnf install asciidoctor    # renders .adoc to HTML
+gh auth login                   # GitHub CLI, for pushing previews
+```
+
+### 2. Enable GitHub Pages on your fork
+
+If your fork already has a `gh-pages` branch, skip to the browser step.
+
+Create the branch (from the repo root of your clone):
+
+```bash
+cd ~/git/openshift-docs
+git switch --orphan gh-pages
+git rm -rf .
+echo "preview site" > index.html
+git add index.html
+git commit -m "init preview branch"
+git push -u origin gh-pages
+git switch main    # back to normal work
+```
+
+Then in the browser, on your fork's repository page (for example,
+`https://github.com/<your-username>/openshift-docs`):
+
+1. Click the **Settings** tab at the top of the repo (not your GitHub profile
+   settings — the account-level Pages page only manages verified domains).
+2. In the left sidebar, under "Code and automation", click **Pages**.
+3. Under "Build and deployment" -> **Source**, select **Deploy from a branch**.
+4. Under **Branch**, pick `gh-pages` and folder `/ (root)`, then **Save**.
+
+This tells GitHub to serve the `gh-pages` branch of your fork as a website.
+
+## Create a preview (per PR)
+
+Run from the repo root, on your PR branch.
+
+### 1. Render the assembly to HTML
+
+```bash
+asciidoctor -S unsafe -B . \
+  -a product-title="OpenShift Container Platform" -a product-version=5 \
+  -o /tmp/preview.html path/to/your-assembly.adoc
+```
+
+- `-B .` is required: the repo uses repo-root-relative include paths.
+- Adjust `product-version` to the PR's target version (`5` for `main`).
+- Use a different `product-title` for other distributions (for example,
+  `OpenShift Dedicated` or `ROSA with HCP`).
+- Warnings about `images/icons/*.png` are harmless (admonition icons).
+
+### 2. Publish to the gh-pages branch
+
+Never commit preview HTML to the PR branch.
+
+```bash
+git switch gh-pages                              # first time: git checkout -b gh-pages origin/gh-pages
+mkdir OSDOCS-<ticket>
+cp /tmp/preview.html OSDOCS-<ticket>/index.html
+git add OSDOCS-<ticket>
+git commit -m "Add preview OSDOCS-<ticket>"
+git push origin gh-pages
+git switch <your-work-branch>                    # back to your PR branch
+```
+
+Optional: add a link to the preview in the `index.html` listing page at the
+root of `gh-pages`:
+
+```html
+<li><a href="OSDOCS-<ticket>/index.html">OSDOCS-<ticket></a></li>
+```
+
+### 3. Share the link
+
+The site deploys in about 1-2 minutes:
+
+```
+https://<your-username>.github.io/openshift-docs/OSDOCS-<ticket>/
+```
+
+Paste the link in the PR. The file is self-contained, so it renders in any
+browser with nothing else to download or load.
+
+## Update a preview
+
+Re-render (step 1 above) and copy the file over the existing one, then commit
+and push to `gh-pages` as before. The URL does not change.
+
+## Delete a preview
+
+Previews stay up indefinitely until you remove them. Clean up when the PR
+merges or the review is finished:
+
+```bash
+git switch gh-pages
+git rm -r OSDOCS-<ticket>
+# also remove its <li> line from index.html if you added one
+git commit -m "Remove preview OSDOCS-<ticket>"
+git push origin gh-pages
+git switch <your-work-branch>
+```
+
+The URL returns 404 after Pages redeploys (about 1-2 minutes).
+
+## Notes
+
+- A preview lives entirely on `gh-pages`; there is never a PR for it. GitHub's
+  "Compare & pull request" button on the branch will say there is nothing to
+  compare (unrelated histories) — that is expected; ignore it.
+- The PR itself is unaffected by anything you push to `gh-pages`.
+- The published preview is publicly visible, the same as the public PR diff.
+- The two `-a` flags replace the attributes the preview bot injects from
+  `_distro_map.yml` (`product-title`, `product-version`).
