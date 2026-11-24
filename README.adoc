@@ -113,6 +113,70 @@ git switch <your-work-branch>
 
 The URL returns 404 after Pages redeploys (about 1-2 minutes).
 
+## Validate that all is clean
+
+Run these checks after any publish, update, or cleanup to confirm the state
+of your `gh-pages` branch and site.
+
+**1. Local working tree is clean** (from the repo root, on `gh-pages`):
+
+```bash
+git status
+```
+
+Expected: `nothing to commit, working tree clean`. Untracked build output
+or editor swap files (`.swp`) are harmless leftovers and can be deleted.
+
+**2. Local branch matches the remote:**
+
+```bash
+git fetch origin
+git log --oneline gh-pages ^origin/gh-pages   # local commits not on remote
+git log --oneline origin/gh-pages ^gh-pages   # remote commits not local
+```
+
+Expected: both commands print nothing. If either prints a commit, a push or
+a pull is pending — this is the check that catches a rejected push before it
+happens.
+
+**3. The branch contains only what you expect:**
+
+```bash
+git ls-tree --name-only origin/gh-pages
+```
+
+Expected: `index.html`, `README.adoc`, `.nojekyll`, `main/`, and one folder
+per live preview (for example, `OSDOCS-<ticket>`). Any folder for a merged
+ticket means the cleanup step is incomplete.
+
+**4. The site serves the right pages:**
+
+```bash
+for d in main OSDOCS-<ticket> OSDOCS-<merged-ticket>; do
+  echo "$d: $(curl -s -o /dev/null -w '%{http_code}' \
+    https://<your-username>.github.io/openshift-docs/$d/)"
+done
+```
+
+Expected: live previews return `200`; deleted tickets return `404`. The
+site redeploys within about 1-2 minutes of a push.
+
+**5. Eyeball the listing page in the browser:**
+
+```
+https://<your-username>.github.io/openshift-docs/
+```
+
+The list should show only the live previews, and every link should open.
+
+**6. GitHub's view of the branch:**
+
+```
+https://github.com/<your-username>/openshift-docs/tree/gh-pages
+```
+
+Same contents as check 3 — no folders for merged tickets.
+
 ## Notes
 
 - A preview lives entirely on `gh-pages`; there is never a PR for it. GitHub's
